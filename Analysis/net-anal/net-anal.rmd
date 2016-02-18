@@ -1,0 +1,102 @@
+---
+output: html_document
+---
+
+```{r setup, include=FALSE}
+  knitr::opts_chunk$set(fig.width=6, fig.height=4, fig.path='figs/',
+                        echo=FALSE, warning=FALSE, message=FALSE)
+
+  library(ggplot2)
+  library(reshape2)
+  source('../archive/utils.R')
+  theme_set(theme_bw(base_size=12))
+  setwd('~/Drive/Danish-SRN/Analysis/net-anal')
+
+  netlog = read.csv('../net-log.csv')
+
+```
+# Analysis of distributed input
+
+Here we present the three main measures separated by input representation. Nets which received localist input are labeled *False* and are plotted on the left. The script generating these results has been checked for likely errors, so these results should be taken seriously. If there is a "mistake", it is most likely  related to how we translate the localist representations of the corpora to distributed representations.
+
+## Word segmentation
+Danish performance improves while English worsens, eliminating the main effect of language. This could imply that there is more distributional information in Danish than in English. Note that if there is no distributional information, then a net will perform worse than it will with localist input because it will essentially have to learn to create a localist representation from the distributed input.
+
+It's also possible that the specific encoding we are using is more favorable for Danish. It's perhaps worth noting that a Danish phonologist constructed it. Most notably, the English nets receive diphthongs as two independent tokens.
+
+```{r segmentation}
+
+df = netlog
+summary(aov(word_F ~ lang * distributed, data=df))
+
+dfc = summarySE(netlog, measurevar="word_F", groupvars=c("lang", "distributed"))
+ggplot(dfc, aes(x=lang, y=word_F, fill=lang)) + 
+    geom_bar(position=position_dodge(), stat="identity") +
+    facet_wrap(~ distributed) +
+    geom_errorbar(aes(ymin=word_F-se, ymax=word_F+se),
+                  width=.2, position=position_dodge(.9)) +
+    xlab('Native language') + ylab('F score') +
+    guides(fill=FALSE) +
+    ggtitle("Word segmentation")
+
+```
+
+
+## Artificial word learning
+Most notably, we see that performance is worse across the board with distributed input. In fact, it is at or below chance. Seeing as Danish performance worsens on the artificial word learning, but improves on the word segmentation, one possible explanation is that distributed representations take more examples to learn---training is much more limited on the artificial task.
+
+__Contrary to our initial findings, the effect of language is only marginally significant for both distributed and localist input.__ The reason for this is a change in how network experimental accuracy is measured. Initially we ran each net on the experiment 1000 times and took the average accuracy. By eliminating this step, we made our accuracy measures much more variable, overpowering the small main effect with noise. You can see this by comparing the plots in localist.html and old-localist.html.
+
+
+```{r 2AFC-accuracy}
+df = melt(netlog,id.vars=c('lang', 'seed', 'distributed'), measure.vars=c('contoid_accuracy','vocoid_accuracy'),
+          variable.name='condition', value.name='accuracy')
+
+summary(aov(accuracy ~ condition*lang*distributed, data=df))
+
+dfc = summarySE(df, measurevar="accuracy", groupvars=c("lang","condition","distributed"))
+ggplot(dfc, aes(x=lang, y=accuracy, fill=condition)) + 
+    geom_bar(position=position_dodge(), stat="identity") +
+    geom_errorbar(aes(ymin=accuracy-se, ymax=accuracy+se),
+                  width=.2, position=position_dodge(.9)) +
+    coord_cartesian(ylim=c(0,1)) +
+    xlab('Native language') + ylab('% correct') +
+    scale_fill_discrete(name="Artificial\nlanguage type",
+                        breaks=c("contoid_accuracy", "vocoid_accuracy"),
+                        labels=c("Contoid", "Vocoid")) +
+    facet_wrap(~ distributed) +
+    ggtitle("Performance on 2AFC")
+```
+
+
+
+## Reaction times
+Reaction times are higher across the board for distributed input, especially for danish contoids, a pattern that remains when eliminating outliers. However we do see that the general pattern is the same for localist and distributed input.
+
+When we compare these results to our initial results, however, we see little agreement. It appears that by only taking the reaction times for correct trials (a change from our original methodology), we have completely changed the pattern of localist results. Danish reaction times have increased dramatically for contoids and decreased slightly for vocoids. English reaction times are similar for contoids and higher for vocoids, with the overall pattern switching directions.
+
+```{r 2AFC-reaction}
+df = melt(netlog, id.vars=c('lang', 'distributed', 'seed'), measure.vars=c('contoid_reaction', 'vocoid_reaction'),
+          variable.name='condition', value.name='reaction')
+
+summary(aov(reaction ~ condition*lang*distributed, data=df))
+
+dfc = summarySE(df, measurevar='reaction', groupvars=c('lang', 'condition', 'distributed'))
+ggplot(dfc, aes(x=lang, y=reaction, fill=condition)) + 
+    geom_bar(position=position_dodge(), stat="identity") +
+    geom_errorbar(aes(ymin=reaction-se, ymax=reaction+se),
+                  width=0.2, position=position_dodge(0.9)) +
+    xlab('Native language') + ylab('Reaction time') +
+    scale_fill_discrete(name="Artificial\nlanguage type",
+                        breaks=c("contoid_reaction", "vocoid_reaction"),
+                        labels=c("Contoid", "Vocoid")) +
+    facet_wrap(~ distributed) +
+    ggtitle('Reaction times')
+```
+
+## Next steps
+  
+  - See if we can get distributed 2AFC to perform above chance by using a deterministic choice function.
+  - See if we can create a less probabilistic choice function that reduces the variance of 2AFC accuracies, giving us the power to identify a main effect.
+    + One possibility is to use a sigmoidal rather than linear choice function, making the net more likely to choose the lower error word.
+  - Figure out what the heck is going on with reaction times.

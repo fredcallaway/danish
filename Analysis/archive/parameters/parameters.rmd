@@ -1,0 +1,185 @@
+---
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(fig.width=6, fig.height=4, fig.path='figs/',
+                      echo=FALSE, warning=FALSE, message=FALSE)
+
+library(ggplot2)
+library(reshape2)
+source('/Users/fred/Dropbox/coding/R/utils.R')
+theme_set(theme_bw(base_size=12))
+setwd("~/Drive/Danish-SRN/Analysis")
+netlog = read.csv('parameters.csv')
+netlog[, c('hidden', 'rate', 'momentum', 'rand_range', 'num_train')] =
+         lapply(netlog[, c('hidden', 'rate', 'momentum', 
+                           'rand_range', 'num_train')], as.factor)
+netlog = subset(netlog, num_train==696692) # leave out under-trained nets for now
+```
+
+#Effect of parameters on net performance
+
+This report summarizes the effect of network parameters on word segmentation and ALL accuracy. We find that network parameters have a substanital effect on both of these measures. For word segmentation, this effect is generally not strong enough to put our initial finding of English superiority into doubt (with the exception of an extreme momentum value of 0.98). However, for the ALL experiment, the strong effect of network parameters in combination with initially weak findings make our initial findings of danish superiority questionable.
+
+---------
+
+## How do net parameters affect word segmentation?
+First, let's look at average word segmentation performance.
+
+_Note: For all graphs, error bars indicate the standard error of the mean._
+
+```{r average-segmentation}
+
+dfc = summarySE(netlog, measurevar="word_F", groupvars=c("language","language"))
+ggplot(dfc, aes(x=language, y=word_F, fill=language)) + 
+    geom_bar(position=position_dodge(), stat="identity") +
+    geom_errorbar(aes(ymin=word_F-se, ymax=word_F+se),
+                  width=.2, position=position_dodge(.9)) +
+    ggtitle("Word segmentation")
+
+```
+
+In concordance with our previous results, English does better. However the difference is not as pronounced. __English word F has lowered from 4.5 to 3.5.__
+
+### Individual effects
+Of course, this does not tell us much. There could be important effects that cancel each other out. Let's look at an ANOVA for all the parameters we varied.
+
+```{r}
+summary(aov(word_F ~ language + rate + momentum + rand_range 
+            + hidden, data=netlog))
+
+```
+
+We find that __language__, __rate__, and __momentum__ are all highly significant. However, these differences only really matter to us if they interact with language. Such an interaction could call into question our initial finding that English nets performed better on the segmentation task than Danish nets. Let's look for such an interaction:
+
+_Note: we do not include interactions with number of hiddent units here because the excess of comparisons prevents R from giving significance. A separate analysis indicated that this parameter does not significantly interact with the others._
+
+<!-- 
+
+```{r segmentation-rate}
+dfc = summarySE(netlog, measurevar='word_F', groupvars=c('language','rate'))
+ggplot(dfc, aes(x=language, y=word_F, fill=rate)) + 
+    geom_bar(position=position_dodge(), stat="identity") +
+    geom_errorbar(aes(ymin=word_F-se, ymax=word_F+se),
+                  width=0.2, position=position_dodge(0.9)) +
+    ggtitle("Rate")
+```
+ -->
+
+```{r}
+
+summary(aov(word_F ~ language * rate * momentum * rand_range 
+            + hidden, data=netlog))
+```
+
+As we see, there is a significant __language by momentum__ interaction. Let's see what this looks like:
+
+```{r segmentation-differences}
+
+dfc = summarySE(netlog, measurevar='word_F', groupvars=c('language','momentum'))
+ggplot(dfc, aes(x=language, y=word_F, fill=momentum)) + 
+    geom_bar(position=position_dodge(), stat="identity") +
+    geom_errorbar(aes(ymin=word_F-se, ymax=word_F+se),
+                  width=0.2, position=position_dodge(0.9)) +
+    ggtitle("Momentum")
+```
+
+Observing this graph, we see that __the pattern of English nets performing better than Danish nets generally holds.__ There is an exception for 0.98, however this is a very high value, so erratic behavior may not be a concern.
+
+There was additionally a rate by momentum interaction. Althougth there was no significant three-way interaction with language, let's see what this looks like.
+
+```{r segmentation-lang-rate-momentum}
+
+dfc = summarySE(netlog, measurevar='word_F', groupvars=c('language','momentum','rate'))
+ggplot(dfc, aes(x=language, y=word_F, fill=language)) + 
+    geom_bar(position=position_dodge(), stat="identity") +
+    geom_errorbar(aes(ymin=word_F-se, ymax=word_F+se),
+                  width=0.2, position=position_dodge(0.9)) +
+    facet_grid(momentum ~ rate) +
+    ggtitle('Segmentation by rate and momentum')
+
+```
+
+It appears that this interaction is only noticable at momentum = 0.98.
+
+## How do net parameters affect ALL performance?
+
+Once again, we'll start by averaging across all parameters to see if the general pattern of results is concordant with our initial findings.
+
+```{r}
+df = melt(netlog, measure.vars=c('expA_accuracy','expB_accuracy'),
+          variable.name='condition', value.name='accuracy')
+
+dfc = summarySE(df, measurevar="accuracy", groupvars=c("language","condition"))
+ggplot(dfc, aes(x=language, y=accuracy, fill=condition)) + 
+    geom_bar(position=position_dodge(), stat="identity") +
+    geom_errorbar(aes(ymin=accuracy-se, ymax=accuracy+se),
+                  width=.2, position=position_dodge(.9)) +
+    coord_cartesian(ylim=c(0.5,0.8)) +
+    ggtitle("ALL accuracy")
+```
+
+As with the segmentation results, we find that the general pattern holds, but with less strength. Notably, __performance of Danish nets on the contoid language has dropped from ~.72 to ~.68.__ (Compare to earlier figure). This difference is concerning because our initial results were only marginally significant. Let's check to see if we still have significance.
+
+```{r }
+df = melt(netlog, measure.vars=c('expA_accuracy','expB_accuracy'),
+          variable.name='condition', value.name='accuracy')
+
+summary(aov(accuracy ~ language * condition, data=df))
+```
+
+There is a significant __language by condition__ interaction and a marginally significant effect of language alone. Looking at the graph, these differences likely come down to the reduced performance of English nets on the contoid language. As with our initial findings, the pattern of contoid vs. vocoid is opposite what we found for human subjects.
+
+### Individual effects
+Now let's look at which parameters have an effect on ALL performance in each task. We'll start by looking at accuracy on the contoid language because of its difference here from our initial findings.
+
+#### Contoids
+
+```{r}
+summary(aov(expA_accuracy ~ language * rate * momentum * rand_range 
+            + hidden, data=netlog))
+```
+
+It appears that there is significant interaction between __language__, __rate__, and __momentum__. Let's look at how these parameters effect performance on the contoid experiment for each language.
+
+```{r contoids}
+dfc = summarySE(netlog, measurevar='expA_accuracy', 
+                groupvars=c('language','momentum','rate'))
+ggplot(dfc, aes(x=language, y=expA_accuracy, colour=language)) + 
+    geom_point(stat="identity") +
+    ylim(0.5, 0.8) +
+    geom_errorbar(aes(ymin=expA_accuracy-se, ymax=expA_accuracy+se),width=0.2) +
+    facet_grid(momentum ~ rate) +
+    ggtitle('Contoid accuracy')
+
+```
+
+It appears that our initial choice of parameters (0.1 and 0.95) was partially responsible for the initial difference we saw in performance on contoids by each language. Let's expand this analysis to look at the relationship between contoid and vocoid performance.
+
+#### Contoids and vocoids
+We'll start with an ANOVA of contoid_accuracy - vocoid_accuracy.
+
+```{r }
+summary(aov((expA_accuracy - expB_accuracy) ~ language * rate 
+            * momentum * rand_range + hidden, data=netlog))
+```
+
+We see that language by rate is significant.
+
+```{r contoid-vocoid}
+df = melt(netlog, measure.vars=c('expA_accuracy','expB_accuracy'),
+          variable.name='condition', value.name='accuracy')
+
+dfc = summarySE(df, measurevar='accuracy', 
+                groupvars=c('language','condition','rate','momentum'))
+ggplot(dfc, aes(x=language, y=accuracy, colour=condition)) + 
+    geom_point(stat="identity") +
+    ylim(0.5, 0.8) +
+    geom_errorbar(aes(ymin=accuracy-se, ymax=accuracy+se), width=0.2) +
+    facet_grid(momentum ~ rate) +
+    ggtitle('All accuracy')
+
+```
+
+Again, we see that rate and momentum have a substantial impact on our intitial qualitative findings. Although on average we see a pattern of danish superiority, this pattern does not hold for several conditions. The pattern of english being worse on the contoids and danish being better on the contoids is more stable, but still not entirely so. Thus, we cannot conclude that our initial findings for ALL performance are stable as we vary network parameters. 

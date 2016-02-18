@@ -1,0 +1,17 @@
+                            LENS Version OSX-1.0a
+                 Copyright (C) 1998-2004  Douglas Rohde,
+      Carnegie Mellon University, Center for the Neural Basis of Cognition
+
+                MacOSX port by Harm Brouwer' (me@hbrouwer.eu),
+    Daniel de Kok' (me@danieldk.eu) and Hartmut Fitz* (hartmut.fitz@gmail.com)
+             ' University of Groningen, Center for Language and Cognition
+             * Max Planck Institute for Psycholinguistics, Nijmegen
+
+Test results on 1000 examples, 1000 ticks:
+                     Network     
+Error total:         4348.28
+Error per example:   4.34828
+Error per tick:      4.34828
+Unit cost per tick:  0.00000
+Output unit criterion reached on 0 examples (0.00%)
+success

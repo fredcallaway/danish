@@ -1,0 +1,2 @@
+# lens-exp
+Tools for running a phonetic experiment with [Lens](http://tedlab.mit.edu/~dr/Lens/) neural network software. At present, the code is geared towards my specific project, but if there is interest, I can make it into a more general tool.

@@ -1,0 +1,37 @@
+
+# Network ID: danish_l_0_80_1_95_1_25_696692
+
+## ARCHITECTURE ##
+seed 0
+addNet srn -i 1
+setObj randRange 0.25
+
+addGroup input   45  INPUT
+addGroup hidden  80 -RESET_ON_EXAMPLE
+addGroup context 80 ELMAN
+addGroup output  45  OUTPUT
+
+connectGroups input hidden
+connectGroups context hidden
+connectGroups hidden output
+elmanConnect hidden context
+orderGroups bias input context hidden output
+
+setObj learningRate 0.1
+setObj momentum 0.95
+setObj batchSize 1
+setObj backpropTicks 1
+setTime -h 1
+
+## TESTING ##
+loadWeights weights/danish_l_0_80_1_95_1_25_696692.wt
+loadExamples test.ex -s "test.ex"
+useTestingSet test.ex
+touch segmentation.out
+echo  > segmentation.out
+proc printOutputs {group unit} {return [format "%f " [getObj $unit.output]]}
+setObj postEventProc {printUnitValues segmentation.out printOutputs output -a; echo "" >> segmentation.out}
+test
+setObj postEventProc {}
+echo success
+exit

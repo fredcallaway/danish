@@ -1,0 +1,67 @@
+
+# Network ID: danish_l_0_80_1_95_1_25_696692
+
+## ARCHITECTURE ##
+seed 0
+addNet srn -i 1
+setObj randRange 0.25
+
+addGroup input   45  INPUT
+addGroup hidden  80 -RESET_ON_EXAMPLE
+addGroup context 80 ELMAN
+addGroup output  45  OUTPUT
+
+connectGroups input hidden
+connectGroups context hidden
+connectGroups hidden output
+elmanConnect hidden context
+orderGroups bias input context hidden output
+
+setObj learningRate 0.1
+setObj momentum 0.95
+setObj batchSize 1
+setObj backpropTicks 1
+setTime -h 1
+
+
+## EXP-A TRAINING ##
+setObj reportInterval 10000
+setObj numUpdates 4548
+loadWeights weights/danish_l_0_80_1_95_1_25_696692.wt
+loadExamples exp-trainA.ex
+useTrainingSet exp-trainA
+train
+
+## EXP-A TESTING ##
+setObj reportInterval 1
+for {set i 0} {$i < 72} {incr i} {
+    echo ***$i
+    loadExamples exp-testA$i.ex
+    useTrainingSet exp-testA$i
+    set n [eval getObject exp-testA$i.numExamples]
+    setObj numUpdates $n
+    train
+}
+# mark the beginning of exp b
+echo ######
+
+## EXP-B TRAINING ##
+setObj reportInterval 10000
+setObj numUpdates 4548
+loadWeights weights/danish_l_0_80_1_95_1_25_696692.wt
+loadExamples exp-trainB.ex
+useTrainingSet exp-trainB
+train
+
+## EXP-B TESTING ##
+setObj reportInterval 1
+for {set i 0} {$i < 72} {incr i} {
+    echo ***$i
+    loadExamples exp-testB$i.ex
+    useTrainingSet exp-testB$i
+    set n [eval getObject exp-testB$i.numExamples]
+    setObj numUpdates $n
+    train
+}
+echo success
+exit

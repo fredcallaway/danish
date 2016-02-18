@@ -1,0 +1,78 @@
+---
+output: html_document
+---
+
+```{r setup, include=FALSE}
+  knitr::opts_chunk$set(fig.width=6, fig.height=4, fig.path='figs/',
+                        echo=FALSE, warning=FALSE, message=FALSE)
+
+  library(ggplot2)
+  library(reshape2)
+  source('../archive/utils.R')
+  theme_set(theme_bw(base_size=12))
+  setwd('~/Drive/Danish-SRN/Analysis/net-anal')
+
+  netlog = read.csv('../net-log.csv')
+  netlog = subset(netlog, distributed == 'True')
+```
+
+
+## Word segmentation
+```{r segmentation}
+
+df = netlog
+out = aov(word_F ~ lang, data=df)
+summary(out)
+
+dfc = summarySE(netlog, measurevar="word_F", groupvars="lang")
+ggplot(dfc, aes(x=lang, y=word_F, fill=lang)) + 
+    geom_bar(position=position_dodge(), stat="identity") +
+    geom_errorbar(aes(ymin=word_F-se, ymax=word_F+se),
+                  width=.2, position=position_dodge(.9)) +
+    xlab('Native language') + ylab('F score') +
+    guides(fill=FALSE) +
+    ggtitle("Word segmentation")
+
+```
+
+
+## Artificial word learning
+```{r 2AFC-accuracy}
+
+df = melt(netlog,id.vars=c('lang','seed'),measure.vars=c('contoid_accuracy','vocoid_accuracy'),
+          variable.name='condition', value.name='accuracy')
+summary(aov(accuracy ~ condition*lang, data=df))
+
+dfc = summarySE(df, measurevar="accuracy", groupvars=c("lang","condition"))
+ggplot(dfc, aes(x=lang, y=accuracy, fill=condition)) + 
+    geom_bar(position=position_dodge(), stat="identity") +
+    geom_errorbar(aes(ymin=accuracy-se, ymax=accuracy+se),
+                  width=.2, position=position_dodge(.9)) +
+    coord_cartesian(ylim=c(0,1)) +
+    xlab('Native language') + ylab('% correct') +
+    scale_fill_discrete(name="Artificial\nlanguage type",
+                        breaks=c("contoid_accuracy", "vocoid_accuracy"),
+                        labels=c("Contoid", "Vocoid")) +
+    ggtitle("Performance on 2AFC")
+```
+
+
+
+## Reaction times
+```{r 2AFC-reaction}
+df = melt(netlog, id.vars=c('lang', 'seed'), measure.vars=c('contoid_reaction', 'vocoid_reaction'),
+          variable.name='condition', value.name='reaction')
+
+dfc = summarySE(df, measurevar='reaction', groupvars=c('lang', 'condition'))
+ggplot(dfc, aes(x=lang, y=reaction, fill=condition)) + 
+    geom_bar(position=position_dodge(), stat="identity") +
+    geom_errorbar(aes(ymin=reaction-se, ymax=reaction+se),
+                  width=0.2, position=position_dodge(0.9)) +
+    xlab('Native language') + ylab('Reaction time') +
+    scale_fill_discrete(name="Artificial\nlanguage type",
+                        breaks=c("contoid_reaction", "vocoid_reaction"),
+                        labels=c("Contoid", "Vocoid")) +
+    ggtitle('Reaction times')
+```
+
+

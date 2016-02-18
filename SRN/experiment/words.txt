@@ -1,0 +1,64 @@
+Danish-A Words
+1: gUdO
+2: d0dU
+3: dEda
+4: gubOgO
+5: bebug0
+6: b8g8ba
+
+Danish-B Words
+1: jUDO
+2: DEDU
+3: DEDA
+4: juwOjO
+5: wewuj0
+6: w8jEwa
+
+Danish-A Nonwords
+1: b8dO
+2: bOdU
+3: d0bu
+4: bag8dE
+5: gOgube
+6: gUdag0
+
+Danish-B Nonwords
+1: w8DO
+2: wODU
+3: Dewu
+4: wajEDE
+5: jOjuwe
+6: jUDaj0
+
+
+English-A Words
+1: sgb1
+2: bgbg
+3: bmbg
+4: sc61s1
+5: 6q6csg
+6: 6zsz62
+
+English-B Words
+1: ygt1
+2: tqt1
+3: tmt2
+4: yc01yg
+5: 0q0cyg
+6: 0zym02
+
+English A Nonwords
+1: 6zb1
+2: 61bg
+3: bg6c
+4: 62szbm
+5: s1sc6q
+6: sgb2sg
+
+English B Nonwords
+1: 0zt1
+2: 01tg
+3: tq0c
+4: 02ymtm
+5: y1yc0q
+6: ygt2yg

@@ -1,0 +1,106 @@
+# toCmu.py
+
+code_to_cmu = {'\n':'\n',
+               '\r':'\r',
+               'X':'X',
+               'Q':'Q',
+               '4':'IY',
+               '3':'AW',
+               't':'DH',
+               'y':'Y',
+               'j':'HH',
+               '6':'B',
+               'B':'JH',
+               'D':'ZH',
+               'm':'EH',
+               'e':'NG',
+               '8':'TH',
+               '2':'AA',
+               'i':'CH',
+               'z':'AE',
+               'b':'D',
+               's':'G',
+               '5':'F',
+               'g':'AH',
+               'w':'K',
+               'f':'M',
+               'l':'L',
+               '1':'AO',
+               'h':'N',
+               'p':'P',
+               'o':'S',
+               'x':'R',
+               'q':'EY',
+               'n':'T',
+               '0':'W',
+               'A':'V',
+               'k':'AY',
+               'r':'Z',
+               'u':'ER',
+               'd':'IH',
+               'c':'UW',
+               '9':'SH',
+               '7':'UH',
+               'C':'OY',
+               'v':'OW',
+              }
+
+cmu_to_sampa = {'\n': '\n',
+               '\r':'\r',
+                'X':'X',
+                'Q':'Q',
+                'IY': 'i',
+                'IH': 'e',
+                'EH': 'E',
+                'AE': '8',
+                'UW': 'u',
+                'AA': '9',
+                'AH': 'U',
+                'AO': 'O',
+                'UH': 'o',
+                'P': 'p',
+                'T': 't',
+                'K': 'k',
+                'B': '2',
+                'D': '3',
+                'G': '4',
+                'F': 'f',
+                'S': 's',
+                'SH': 'S',
+                'Z': 'z',
+                'ZH': 'Z',
+                'HH': 'h',
+                'V': 'v',
+                'Y': 'j',
+                'R': 'G',
+                'ER': 'R',
+                'M': 'm',
+                'N': 'n',
+                'NG': 'N',
+                'L': 'l',
+                'DH': '1',
+                'TH': 'T',
+                'W': 'w',
+                'AY': 'Aj',
+                'JH': '3Z',
+                'EY': 'Ej',
+                'OY': 'Oj',
+                'AW': 'Aw',
+                'OW': 'Ow',
+                'CH': 'tS',
+               }
+
+def main(corpus_file):
+     with open(corpus_file) as f:
+          corpus = f.read()
+
+     result = []
+     for c in corpus:
+         result.append(cmu_to_sampa[code_to_cmu[c]])
+
+     with open(corpus_file, 'w+') as f:
+          f.write(''.join(result))
+
+if __name__ == '__main__':
+     import sys
+     main(sys.argv[1])

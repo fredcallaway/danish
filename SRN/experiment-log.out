@@ -1,0 +1,1205 @@
+                            LENS Version OSX-1.0a
+                 Copyright (C) 1998-2004  Douglas Rohde,
+      Carnegie Mellon University, Center for the Neural Basis of Cognition
+
+                MacOSX port by Harm Brouwer' (me@hbrouwer.eu),
+    Daniel de Kok' (me@danieldk.eu) and Hartmut Fitz* (hartmut.fitz@gmail.com)
+             ' University of Groningen, Center for Language and Cognition
+             * Max Planck Institute for Psycholinguistics, Nijmegen
+
+Performing 4548 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701240)   0.00234   0.00000   107958    0.12184        3s        0s
+***0
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701241)   3.90779   0.00000   107959   -0.02885        0s        0s
+ 701242)   15.9119   0.00000   107959   -0.29826        0s        0s
+ 701243)   6.55536   0.00000   107958   -0.26893        0s        0s
+ 701244)   17.0789   0.00000   107957    0.03623        0s        0s
+***1
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701245)   1.87229   0.00000   107956    0.04074        0s        0s
+ 701246)   0.98201   0.00000   107955   -0.02500        0s        0s
+ 701247)   5.02961   0.00000   107954    0.09577        0s        0s
+ 701248)   16.8889   0.00000   107952    0.33767        0s        0s
+***2
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701249)   0.19679   0.00000   107950   -0.33220        0s        0s
+ 701250)   0.56494   0.00000   107949    0.19222        0s        0s
+ 701251)   0.25496   0.00000   107948   -0.31653        0s        0s
+ 701252)   11.7949   0.00000   107946    0.06729        0s        0s
+***3
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701253)   9.07196   0.00000   107944   -0.05523        0s        0s
+ 701254)   7.13621   0.00000   107942    0.06985        0s        0s
+ 701255)   0.24917   0.00000   107940   -0.22921        0s        0s
+ 701256)   11.0651   0.00000   107938    0.34115        0s        0s
+***4
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701257)   7.05525   0.00000   107936   -0.06751        0s        0s
+ 701258)   0.01144   0.00000   107933   -0.03002        0s        0s
+ 701259)   0.01654   0.00000   107932   -0.20242        0s        0s
+ 701260)   9.72403   0.00000   107929    0.45072        0s        0s
+***5
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701261)   0.58433   0.00000   107927   -0.19727        0s        0s
+ 701262)   5.37236   0.00000   107925    0.02886        0s        0s
+ 701263)   8.70344   0.00000   107923   -0.03589        0s        0s
+ 701264)   13.1832   0.00000   107921    0.28322        0s        0s
+***6
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701265)   11.1421   0.00000   107918    0.01813        0s        0s
+ 701266)   0.01731   0.00000   107916    0.16362        0s        0s
+ 701267)   1.24712   0.00000   107914    0.03593        0s        0s
+ 701268)   0.01065   0.00000   107912   -0.22210        0s        0s
+ 701269)   1.21683   0.00000   107910    0.19208        0s        0s
+ 701270)   14.5199   0.00000   107908    0.36988        0s        0s
+***7
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701271)   2.53343   0.00000   107906   -0.27822        0s        0s
+ 701272)   1.64646   0.00000   107904   -0.15949        0s        0s
+ 701273)   2.23524   0.00000   107902   -0.24803        0s        0s
+ 701274)   11.0254   0.00000   107900   -0.13404        0s        0s
+ 701275)   5.47939   0.00000   107898    0.16605        0s        0s
+ 701276)   20.4984   0.00000   107895    0.17869        0s        0s
+***8
+Performing 7 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701277)   1.10684   0.00000   107892   -0.13528        0s        0s
+ 701278)   5.91433   0.00000   107889   -0.03719        0s        0s
+ 701279)   2.29474   0.00000   107886   -0.02248        0s        0s
+ 701280)   0.09160   0.00000   107884   -0.13292        0s        0s
+ 701281)   5.33428   0.00000   107882    0.08209        0s        0s
+ 701282)   0.01158   0.00000   107879    0.06803        0s        0s
+ 701283)   6.59512   0.00000   107877    0.25676        0s        0s
+***9
+Performing 7 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701284)   5.26830   0.00000   107874    0.32453        0s        0s
+ 701285)   0.01048   0.00000   107872    0.03618        0s        0s
+ 701286)   0.17782   0.00000   107870   -0.46053        0s        0s
+ 701287)   3.18233   0.00000   107869    0.15924        0s        0s
+ 701288)   0.06240   0.00000   107867   -0.14629        0s        0s
+ 701289)   0.08998   0.00000   107866   -0.17309        0s        0s
+ 701290)   3.53974   0.00000   107864    0.31469        0s        0s
+***10
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701291)   1.94474   0.00000   107863   -0.15011        0s        0s
+ 701292)   0.11464   0.00000   107862   -0.27121        0s        0s
+ 701293)   8.01287   0.00000   107860   -0.12865        0s        0s
+ 701294)   11.9574   0.00000   107859    0.10078        0s        0s
+ 701295)   4.93122   0.00000   107857    0.06758        0s        0s
+ 701296)   1.63373   0.00000   107855    0.33646        0s        0s
+***11
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701297)   0.80129   0.00000   107853   -0.18318        0s        0s
+ 701298)   0.00307   0.00000   107852    0.05975        0s        0s
+ 701299)   2.47916   0.00000   107851   -0.09803        0s        0s
+ 701300)   0.04772   0.00000   107850   -0.21625        0s        0s
+ 701301)   2.14020   0.00000   107849   -0.03720        0s        0s
+ 701302)   5.68419   0.00000   107848    0.01013        0s        0s
+***12
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701303)   4.74933   0.00000   107847    0.10358        0s        0s
+ 701304)   14.3593   0.00000   107845   -0.00033        0s        0s
+ 701305)   5.30746   0.00000   107844   -0.27120        0s        0s
+ 701306)   6.11845   0.00000   107842    0.20980        0s        0s
+***13
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701307)   1.16969   0.00000   107841   -0.01659        0s        0s
+ 701308)   4.78368   0.00000   107839   -0.22683        0s        0s
+ 701309)   1.05185   0.00000   107838    0.27573        0s        0s
+ 701310)   0.32034   0.00000   107837    0.20028        0s        0s
+***14
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701311)   9.78351   0.00000   107836   -0.32341        0s        0s
+ 701312)   5.68011   0.00000   107835    0.11698        0s        0s
+ 701313)   0.70030   0.00000   107834    0.44238        0s        0s
+ 701314)   0.25816   0.00000   107833    0.11811        0s        0s
+***15
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701315)   3.34693   0.00000   107832   -0.62715        0s        0s
+ 701316)   0.12932   0.00000   107831    0.06908        0s        0s
+ 701317)   0.94151   0.00000   107830   -0.21345        0s        0s
+ 701318)   0.26794   0.00000   107830    0.13353        0s        0s
+***16
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701319)   3.77756   0.00000   107829   -0.26294        0s        0s
+ 701320)   0.67326   0.00000   107829   -0.11472        0s        0s
+ 701321)   4.56609   0.00000   107828    0.03800        0s        0s
+ 701322)   0.11190   0.00000   107827   -0.20653        0s        0s
+ 701323)   4.32727   0.00000   107826    0.28538        0s        0s
+ 701324)   3.30374   0.00000   107826   -0.04873        0s        0s
+***17
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701325)   0.43777   0.00000   107825    0.03538        0s        0s
+ 701326)   7.84061   0.00000   107824   -0.00496        0s        0s
+ 701327)   7.57675   0.00000   107823    0.02087        0s        0s
+ 701328)   3.01497   0.00000   107822   -0.00213        0s        0s
+***18
+Performing 7 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701329)   1.21310   0.00000   107821   -0.07216        0s        0s
+ 701330)   0.01868   0.00000   107820   -0.02093        0s        0s
+ 701331)   1.58430   0.00000   107819    0.12889        0s        0s
+ 701332)   3.17376   0.00000   107819    0.16167        0s        0s
+ 701333)   0.76588   0.00000   107818   -0.08080        0s        0s
+ 701334)   0.03184   0.00000   107818   -0.12119        0s        0s
+ 701335)   0.31996   0.00000   107818   -0.32762        0s        0s
+***19
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701336)   6.94090   0.00000   107817    0.01896        0s        0s
+ 701337)   2.66412   0.00000   107817   -0.08891        0s        0s
+ 701338)   2.16242   0.00000   107816   -0.12977        0s        0s
+ 701339)   7.30906   0.00000   107816   -0.07400        0s        0s
+ 701340)   4.45366   0.00000   107815   -0.03527        0s        0s
+ 701341)   18.9404   0.00000   107814   -0.23875        0s        0s
+***20
+Performing 7 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701342)   2.12582   0.00000   107812    0.17599        0s        0s
+ 701343)   5.53406   0.00000   107811    0.01213        0s        0s
+ 701344)   2.60423   0.00000   107809    0.18020        0s        0s
+ 701345)   0.14952   0.00000   107808    0.09071        0s        0s
+ 701346)   0.73382   0.00000   107807    0.14299        0s        0s
+ 701347)   0.01951   0.00000   107806    0.04160        0s        0s
+ 701348)   4.02691   0.00000   107805   -0.22850        0s        0s
+***21
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701349)   5.48287   0.00000   107804   -0.27760        0s        0s
+ 701350)   0.06004   0.00000   107803    0.05650        0s        0s
+ 701351)   2.11881   0.00000   107802    0.10242        0s        0s
+ 701352)   0.14609   0.00000   107801   -0.22611        0s        0s
+ 701353)   2.27160   0.00000   107801   -0.05717        0s        0s
+ 701354)   5.42180   0.00000   107800   -0.15249        0s        0s
+***22
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701355)   5.00844   0.00000   107799   -0.29590        0s        0s
+ 701356)   2.37535   0.00000   107799   -0.10115        0s        0s
+ 701357)   3.44856   0.00000   107798   -0.28634        0s        0s
+ 701358)   2.73483   0.00000   107797   -0.05590        0s        0s
+***23
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701359)   2.65855   0.00000   107796    0.09489        0s        0s
+ 701360)   1.99661   0.00000   107795    0.18264        0s        0s
+ 701361)   12.6018   0.00000   107794    0.04928        0s        0s
+ 701362)   10.4887   0.00000   107792    0.08764        0s        0s
+ 701363)   4.26667   0.00000   107790   -0.07356        0s        0s
+ 701364)   1.53222   0.00000   107788   -0.38273        0s        0s
+***24
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701365)   0.76620   0.00000   107786   -0.00015        0s        0s
+ 701366)   8.56316   0.00000   107784   -0.15516        0s        0s
+ 701367)   3.07456   0.00000   107783    0.01945        0s        0s
+ 701368)   1.60456   0.00000   107781    0.24104        0s        0s
+***25
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701369)   2.04088   0.00000   107780   -0.08545        0s        0s
+ 701370)   0.18597   0.00000   107778    0.01076        0s        0s
+ 701371)   0.06523   0.00000   107777   -0.17614        0s        0s
+ 701372)   0.95418   0.00000   107776    0.16493        0s        0s
+***26
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701373)   4.14243   0.00000   107775   -0.09187        0s        0s
+ 701374)   7.05836   0.00000   107774   -0.12930        0s        0s
+ 701375)   1.91134   0.00000   107774   -0.36865        0s        0s
+ 701376)   1.43203   0.00000   107773    0.00254        0s        0s
+***27
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701377)   2.31489   0.00000   107772   -0.20370        0s        0s
+ 701378)   0.63179   0.00000   107771   -0.19348        0s        0s
+ 701379)   2.82029   0.00000   107771    0.13970        0s        0s
+ 701380)   2.51325   0.00000   107770   -0.28048        0s        0s
+ 701381)   2.11236   0.00000   107770    0.09405        0s        0s
+ 701382)   0.32616   0.00000   107770    0.16729        0s        0s
+***28
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701383)   2.02115   0.00000   107769   -0.16667        0s        0s
+ 701384)   7.21740   0.00000   107769   -0.08101        0s        0s
+ 701385)   5.86419   0.00000   107768    0.08838        0s        0s
+ 701386)   3.40989   0.00000   107767    0.00799        0s        0s
+***29
+Performing 7 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701387)   0.58348   0.00000   107767   -0.32913        0s        0s
+ 701388)   0.02625   0.00000   107766    0.09777        0s        0s
+ 701389)   1.05107   0.00000   107766    0.01617        0s        0s
+ 701390)   4.40940   0.00000   107766    0.16593        0s        0s
+ 701391)   0.67823   0.00000   107765   -0.29906        0s        0s
+ 701392)   0.07986   0.00000   107765    0.07852        0s        0s
+ 701393)   0.40975   0.00000   107765    0.06807        0s        0s
+***30
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701394)   0.70173   0.00000   107765   -0.30140        0s        0s
+ 701395)   0.16533   0.00000   107765    0.01259        0s        0s
+ 701396)   2.38754   0.00000   107766    0.00942        0s        0s
+ 701397)   0.33823   0.00000   107766    0.20262        0s        0s
+ 701398)   1.66454   0.00000   107766   -0.11024        0s        0s
+ 701399)   3.30940   0.00000   107767   -0.00254        0s        0s
+***31
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701400)   1.53791   0.00000   107767    0.28142        0s        0s
+ 701401)   3.44976   0.00000   107767    0.17100        0s        0s
+ 701402)   1.90933   0.00000   107768    0.33904        0s        0s
+ 701403)   5.94718   0.00000   107768   -0.43439        0s        0s
+ 701404)   3.70469   0.00000   107768   -0.06737        0s        0s
+ 701405)   17.2964   0.00000   107768   -0.01167        0s        0s
+***32
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701406)   4.03678   0.00000   107767   -0.03566        0s        0s
+ 701407)   3.75080   0.00000   107767   -0.14567        0s        0s
+ 701408)   3.18815   0.00000   107766   -0.49025        0s        0s
+ 701409)   0.11410   0.00000   107765   -0.11695        0s        0s
+***33
+Performing 7 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701410)   7.52527   0.00000   107764   -0.11440        0s        0s
+ 701411)   7.63442   0.00000   107763    0.04275        0s        0s
+ 701412)   1.95696   0.00000   107763   -0.36156        0s        0s
+ 701413)   0.08133   0.00000   107762    0.17634        0s        0s
+ 701414)   0.30388   0.00000   107761    0.05406        0s        0s
+ 701415)   0.00722   0.00000   107761    0.00366        0s        0s
+ 701416)   4.34935   0.00000   107760   -0.28437        0s        0s
+***34
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701417)   2.09317   0.00000   107759   -0.11723        0s        0s
+ 701418)   2.11444   0.00000   107758    0.10563        0s        0s
+ 701419)   6.16936   0.00000   107758    0.13216        0s        0s
+ 701420)   7.64021   0.00000   107756    0.16848        0s        0s
+ 701421)   1.74370   0.00000   107755    0.26714        0s        0s
+ 701422)   1.76102   0.00000   107754   -0.26615        0s        0s
+***35
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701423)   3.06791   0.00000   107753   -0.15369        0s        0s
+ 701424)   2.39126   0.00000   107752    0.09096        0s        0s
+ 701425)   1.15216   0.00000   107751    0.12683        0s        0s
+ 701426)   1.44073   0.00000   107750   -0.41754        0s        0s
+***36
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701427)   1.64247   0.00000   107749   -0.51828        0s        0s
+ 701428)   0.09603   0.00000   107749   -0.08344        0s        0s
+ 701429)   6.60520   0.00000   107748   -0.24888        0s        0s
+ 701430)   0.33412   0.00000   107747    0.09315        0s        0s
+ 701431)   3.38837   0.00000   107746    0.03102        0s        0s
+ 701432)   0.85214   0.00000   107746   -0.41221        0s        0s
+***37
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701433)   5.00106   0.00000   107745   -0.26380        0s        0s
+ 701434)   10.9349   0.00000   107744   -0.11334        0s        0s
+ 701435)   3.55797   0.00000   107742    0.15749        0s        0s
+ 701436)   0.76814   0.00000   107741    0.09663        0s        0s
+***38
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701437)   6.23584   0.00000   107740    0.41726        0s        0s
+ 701438)   16.1597   0.00000   107739    0.10067        0s        0s
+ 701439)   0.72669   0.00000   107738   -0.15850        0s        0s
+ 701440)   1.61931   0.00000   107737   -0.01016        0s        0s
+***39
+Performing 7 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701441)   6.38222   0.00000   107736   -0.11135        0s        0s
+ 701442)   0.01004   0.00000   107735    0.00856        0s        0s
+ 701443)   0.61252   0.00000   107734   -0.17076        0s        0s
+ 701444)   4.51230   0.00000   107733    0.10588        0s        0s
+ 701445)   0.19362   0.00000   107732   -0.18326        0s        0s
+ 701446)   0.04348   0.00000   107732    0.11028        0s        0s
+ 701447)   0.58597   0.00000   107731    0.16714        0s        0s
+***40
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701448)   1.12285   0.00000   107731   -0.15803        0s        0s
+ 701449)   5.12358   0.00000   107731   -0.18746        0s        0s
+ 701450)   3.11617   0.00000   107730    0.25790        0s        0s
+ 701451)   4.52332   0.00000   107729    0.05284        0s        0s
+***41
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701452)   11.8942   0.00000   107728   -0.14472        0s        0s
+ 701453)   1.57254   0.00000   107728   -0.09402        0s        0s
+ 701454)   2.37962   0.00000   107727   -0.21482        0s        0s
+ 701455)   0.43046   0.00000   107726    0.13925        0s        0s
+ 701456)   1.57204   0.00000   107726   -0.41735        0s        0s
+ 701457)   2.80433   0.00000   107725    0.18840        0s        0s
+***42
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701458)   1.57072   0.00000   107725    0.00730        0s        0s
+ 701459)   2.07517   0.00000   107725   -0.19099        0s        0s
+ 701460)   2.23605   0.00000   107725    0.10162        0s        0s
+ 701461)   5.61405   0.00000   107724   -0.45373        0s        0s
+ 701462)   5.36534   0.00000   107724   -0.07124        0s        0s
+ 701463)   15.3669   0.00000   107723    0.03451        0s        0s
+***43
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701464)   2.55065   0.00000   107722   -0.27750        0s        0s
+ 701465)   3.37227   0.00000   107721   -0.15210        0s        0s
+ 701466)   3.18549   0.00000   107720   -0.31669        0s        0s
+ 701467)   0.06100   0.00000   107719   -0.04651        0s        0s
+***44
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701468)   0.52884   0.00000   107719   -0.10818        0s        0s
+ 701469)   3.07754   0.00000   107718    0.32157        0s        0s
+ 701470)   0.55847   0.00000   107718    0.02092        0s        0s
+ 701471)   0.81717   0.00000   107717   -0.66761        0s        0s
+***45
+Performing 7 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701472)   10.1181   0.00000   107717   -0.25308        0s        0s
+ 701473)   9.30369   0.00000   107716   -0.04733        0s        0s
+ 701474)   3.57733   0.00000   107715   -0.06949        0s        0s
+ 701475)   0.07883   0.00000   107714    0.14906        0s        0s
+ 701476)   1.58028   0.00000   107713   -0.10813        0s        0s
+ 701477)   0.00630   0.00000   107712   -0.04733        0s        0s
+ 701478)   3.78771   0.00000   107711   -0.15627        0s        0s
+***46
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701479)   3.74336   0.00000   107710    0.32013        0s        0s
+ 701480)   3.67691   0.00000   107709   -0.09086        0s        0s
+ 701481)   1.26040   0.00000   107708   -0.11501        0s        0s
+ 701482)   1.42340   0.00000   107708   -0.24084        0s        0s
+***47
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701483)   2.60344   0.00000   107707   -0.26712        0s        0s
+ 701484)   2.08072   0.00000   107706   -0.11244        0s        0s
+ 701485)   5.09158   0.00000   107705    0.08628        0s        0s
+ 701486)   7.97884   0.00000   107704    0.03830        0s        0s
+ 701487)   0.65532   0.00000   107702    0.08240        0s        0s
+ 701488)   1.69342   0.00000   107701    0.00500        0s        0s
+***48
+Performing 7 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701489)   4.70078   0.00000   107700    0.22719        0s        0s
+ 701490)   0.01019   0.00000   107699   -0.00369        0s        0s
+ 701491)   0.65303   0.00000   107698   -0.16367        0s        0s
+ 701492)   3.88751   0.00000   107697   -0.31863        0s        0s
+ 701493)   0.49876   0.00000   107696    0.13688        0s        0s
+ 701494)   0.09363   0.00000   107696    0.02628        0s        0s
+ 701495)   0.55608   0.00000   107695   -0.03910        0s        0s
+***49
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701496)   1.67540   0.00000   107695   -0.24837        0s        0s
+ 701497)   9.50413   0.00000   107694   -0.21361        0s        0s
+ 701498)   3.19647   0.00000   107694   -0.12418        0s        0s
+ 701499)   0.33435   0.00000   107693   -0.18845        0s        0s
+***50
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701500)   5.07160   0.00000   107693    0.15100        0s        0s
+ 701501)   0.07041   0.00000   107692   -0.07429        0s        0s
+ 701502)   1.33498   0.00000   107692    0.24008        0s        0s
+ 701503)   0.67618   0.00000   107691   -0.06207        0s        0s
+ 701504)   0.88197   0.00000   107691   -0.36971        0s        0s
+ 701505)   3.01292   0.00000   107691   -0.06323        0s        0s
+***51
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701506)   5.69609   0.00000   107691    0.15715        0s        0s
+ 701507)   9.01568   0.00000   107690   -0.03109        0s        0s
+ 701508)   1.98768   0.00000   107690   -0.12114        0s        0s
+ 701509)   1.01451   0.00000   107690    0.11009        0s        0s
+***52
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701510)   1.58964   0.00000   107690    0.23747        0s        0s
+ 701511)   4.44358   0.00000   107690   -0.11913        0s        0s
+ 701512)   3.66333   0.00000   107689   -0.25582        0s        0s
+ 701513)   3.14897   0.00000   107689    0.17392        0s        0s
+***53
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701514)   0.05372   0.00000   107689    0.19978        0s        0s
+ 701515)   6.55608   0.00000   107688   -0.27059        0s        0s
+ 701516)   2.62308   0.00000   107688    0.00334        0s        0s
+ 701517)   0.22002   0.00000   107688    0.04435        0s        0s
+***54
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701518)   1.37554   0.00000   107687   -0.23666        0s        0s
+ 701519)   2.91469   0.00000   107687   -0.44689        0s        0s
+ 701520)   1.18854   0.00000   107687   -0.25444        0s        0s
+ 701521)   5.23433   0.00000   107687   -0.25998        0s        0s
+ 701522)   3.86148   0.00000   107687   -0.57231        0s        0s
+ 701523)   12.9608   0.00000   107686   -0.07301        0s        0s
+***55
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701524)   0.05193   0.00000   107685   -0.04815        0s        0s
+ 701525)   6.67103   0.00000   107685    0.17576        0s        0s
+ 701526)   0.96716   0.00000   107684   -0.15244        0s        0s
+ 701527)   0.92135   0.00000   107684   -0.34925        0s        0s
+***56
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701528)   4.25124   0.00000   107683   -0.09014        0s        0s
+ 701529)   3.02215   0.00000   107683   -0.10182        0s        0s
+ 701530)   0.09557   0.00000   107682    0.00489        0s        0s
+ 701531)   0.66796   0.00000   107682   -0.15713        0s        0s
+***57
+Performing 7 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701532)   7.35890   0.00000   107681   -0.03952        0s        0s
+ 701533)   6.71726   0.00000   107680   -0.16246        0s        0s
+ 701534)   5.06074   0.00000   107679    0.07057        0s        0s
+ 701535)   0.09369   0.00000   107678   -0.10061        0s        0s
+ 701536)   0.33260   0.00000   107678    0.05588        0s        0s
+ 701537)   0.01262   0.00000   107677   -0.22893        0s        0s
+ 701538)   2.81231   0.00000   107677    0.05187        0s        0s
+***58
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701539)   0.27244   0.00000   107676   -0.47202        0s        0s
+ 701540)   2.72360   0.00000   107676   -0.06300        0s        0s
+ 701541)   9.12144   0.00000   107675   -0.16807        0s        0s
+ 701542)   7.30847   0.00000   107673    0.10465        0s        0s
+ 701543)   0.38645   0.00000   107672   -0.31630        0s        0s
+ 701544)   0.92616   0.00000   107672   -0.36041        0s        0s
+***59
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701545)   2.51782   0.00000   107671    0.11162        0s        0s
+ 701546)   0.13289   0.00000   107670   -0.21112        0s        0s
+ 701547)   4.45932   0.00000   107669   -0.11756        0s        0s
+ 701548)   1.67933   0.00000   107668    0.17794        0s        0s
+ 701549)   2.75374   0.00000   107667    0.11806        0s        0s
+ 701550)   0.43747   0.00000   107667   -0.35942        0s        0s
+***60
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701551)   3.12617   0.00000   107666   -0.29620        0s        0s
+ 701552)   0.27322   0.00000   107665    0.04250        0s        0s
+ 701553)   1.25049   0.00000   107665   -0.22143        0s        0s
+ 701554)   0.97601   0.00000   107665   -0.15365        0s        0s
+ 701555)   1.38315   0.00000   107665   -0.34623        0s        0s
+ 701556)   2.61411   0.00000   107665   -0.09455        0s        0s
+***61
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701557)   2.85793   0.00000   107665    0.01505        0s        0s
+ 701558)   6.46676   0.00000   107664   -0.33581        0s        0s
+ 701559)   1.54204   0.00000   107664   -0.10233        0s        0s
+ 701560)   0.67070   0.00000   107664   -0.10944        0s        0s
+***62
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701561)   0.91820   0.00000   107664   -0.22111        0s        0s
+ 701562)   2.40848   0.00000   107664   -0.13973        0s        0s
+ 701563)   1.18909   0.00000   107664    0.18357        0s        0s
+ 701564)   0.57567   0.00000   107664    0.11943        0s        0s
+***63
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701565)   2.69941   0.00000   107665    0.18655        0s        0s
+ 701566)   5.71124   0.00000   107665   -0.00089        0s        0s
+ 701567)   2.25833   0.00000   107665   -0.37953        0s        0s
+ 701568)   1.09804   0.00000   107665   -0.29379        0s        0s
+***64
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701569)   2.40240   0.00000   107665   -0.00460        0s        0s
+ 701570)   1.94651   0.00000   107665   -0.06046        0s        0s
+ 701571)   2.16696   0.00000   107666    0.41353        0s        0s
+ 701572)   1.20987   0.00000   107666   -0.29103        0s        0s
+***65
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701573)   1.75163   0.00000   107667    0.71074        0s        0s
+ 701574)   5.00703   0.00000   107667    0.00518        0s        0s
+ 701575)   2.73833   0.00000   107667   -0.01383        0s        0s
+ 701576)   1.38499   0.00000   107668   -0.00583        0s        0s
+***66
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701577)   6.63811   0.00000   107668    0.00284        0s        0s
+ 701578)   3.87008   0.00000   107668   -0.22043        0s        0s
+ 701579)   1.41379   0.00000   107668    0.01004        0s        0s
+ 701580)   3.91125   0.00000   107668   -0.25349        0s        0s
+ 701581)   5.17275   0.00000   107668   -0.43732        0s        0s
+ 701582)   12.9355   0.00000   107668   -0.01996        0s        0s
+***67
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701583)   13.5557   0.00000   107667   -0.09485        0s        0s
+ 701584)   0.02263   0.00000   107667   -0.16546        0s        0s
+ 701585)   0.03570   0.00000   107666   -0.01333        0s        0s
+ 701586)   0.68919   0.00000   107666   -0.06875        0s        0s
+***68
+Performing 7 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701587)   6.11643   0.00000   107665   -0.27713        0s        0s
+ 701588)   5.69929   0.00000   107665   -0.18786        0s        0s
+ 701589)   4.00479   0.00000   107664   -0.01715        0s        0s
+ 701590)   0.12766   0.00000   107663   -0.10816        0s        0s
+ 701591)   0.96347   0.00000   107662    0.06542        0s        0s
+ 701592)   0.01447   0.00000   107662    0.05875        0s        0s
+ 701593)   1.41157   0.00000   107662    0.02578        0s        0s
+***69
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701594)   3.38573   0.00000   107661    0.36799        0s        0s
+ 701595)   0.14200   0.00000   107661   -0.20877        0s        0s
+ 701596)   4.78250   0.00000   107660   -0.36300        0s        0s
+ 701597)   2.31036   0.00000   107660    0.10545        0s        0s
+ 701598)   3.16330   0.00000   107659    0.06097        0s        0s
+ 701599)   0.27148   0.00000   107659   -0.12517        0s        0s
+***70
+Performing 7 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701600)   4.89513   0.00000   107659    0.04311        0s        0s
+ 701601)   0.01030   0.00000   107658    0.02870        0s        0s
+ 701602)   2.25815   0.00000   107658   -0.25970        0s        0s
+ 701603)   2.67263   0.00000   107658    0.10336        0s        0s
+ 701604)   2.48299   0.00000   107657    0.12864        0s        0s
+ 701605)   0.20599   0.00000   107657   -0.29936        0s        0s
+ 701606)   0.60058   0.00000   107657   -0.11359        0s        0s
+***71
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701607)   5.59062   0.00000   107657   -0.38396        0s        0s
+ 701608)   0.86494   0.00000   107657   -0.03159        0s        0s
+ 701609)   5.46400   0.00000   107656   -0.01837        0s        0s
+ 701610)   6.43014   0.00000   107656    0.32052        0s        0s
+ 701611)   1.92036   0.00000   107655   -0.06579        0s        0s
+ 701612)   0.96763   0.00000   107654   -0.15249        0s        0s
+######
+Performing 4548 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701240)   2.64828   0.00000   108395    0.25222        3s        0s
+***0
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701241)   2.46478   0.00000   108394    0.04681        0s        0s
+ 701242)   14.4633   0.00000   108394   -0.16598        0s        0s
+ 701243)   15.7856   0.00000   108393    0.10708        0s        0s
+ 701244)   17.5755   0.00000   108391    0.03507        0s        0s
+***1
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701245)   0.83633   0.00000   108390   -0.06822        0s        0s
+ 701246)   1.10313   0.00000   108389   -0.36526        0s        0s
+ 701247)   0.24925   0.00000   108388    0.26803        0s        0s
+ 701248)   17.9166   0.00000   108386    0.35993        0s        0s
+***2
+Performing 5 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701249)   0.03867   0.00000   108385   -0.27672        0s        0s
+ 701250)   1.06534   0.00000   108384   -0.00446        0s        0s
+ 701251)   0.09421   0.00000   108383   -0.25238        0s        0s
+ 701252)   0.05729   0.00000   108382    0.02134        0s        0s
+ 701253)   14.6521   0.00000   108381    0.52989        0s        0s
+***3
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701254)   13.2758   0.00000   108379    0.08629        0s        0s
+ 701255)   0.92186   0.00000   108377   -0.28133        0s        0s
+ 701256)   8.69903   0.00000   108375   -0.04921        0s        0s
+ 701257)   7.41873   0.00000   108373    0.12784        0s        0s
+***4
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701258)   1.98692   0.00000   108371   -0.27376        0s        0s
+ 701259)   2.36458   0.00000   108369   -0.09930        0s        0s
+ 701260)   0.02419   0.00000   108367   -0.05601        0s        0s
+ 701261)   10.2664   0.00000   108365    0.46334        0s        0s
+***5
+Performing 5 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701262)   1.89438   0.00000   108363    0.05553        0s        0s
+ 701263)   0.94418   0.00000   108362   -0.23936        0s        0s
+ 701264)   6.47169   0.00000   108360   -0.06144        0s        0s
+ 701265)   0.11877   0.00000   108358    0.00679        0s        0s
+ 701266)   20.4889   0.00000   108354    0.27360        0s        0s
+***6
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701267)   13.9442   0.00000   108351   -0.09996        0s        0s
+ 701268)   0.01937   0.00000   108347   -0.01418        0s        0s
+ 701269)   0.80023   0.00000   108344    0.00800        0s        0s
+ 701270)   0.01451   0.00000   108341   -0.12916        0s        0s
+ 701271)   0.10286   0.00000   108339   -0.05394        0s        0s
+ 701272)   7.47304   0.00000   108336    0.40815        0s        0s
+***7
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701273)   10.4248   0.00000   108333   -0.09312        0s        0s
+ 701274)   0.48687   0.00000   108331   -0.10280        0s        0s
+ 701275)   1.42862   0.00000   108328    0.08664        0s        0s
+ 701276)   12.5879   0.00000   108326   -0.09872        0s        0s
+ 701277)   1.01243   0.00000   108323    0.14131        0s        0s
+ 701278)   5.21797   0.00000   108321    0.33026        0s        0s
+***8
+Performing 7 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701279)   18.0140   0.00000   108318   -0.04905        0s        0s
+ 701280)   6.04744   0.00000   108315   -0.07989        0s        0s
+ 701281)   9.73449   0.00000   108312    0.11780        0s        0s
+ 701282)   0.01908   0.00000   108309   -0.16328        0s        0s
+ 701283)   10.4008   0.00000   108306   -0.03183        0s        0s
+ 701284)   0.01052   0.00000   108303    0.10310        0s        0s
+ 701285)   7.99255   0.00000   108300    0.36214        0s        0s
+***9
+Performing 7 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701286)   13.6378   0.00000   108297    0.04103        0s        0s
+ 701287)   0.25380   0.00000   108294   -0.03215        0s        0s
+ 701288)   1.26959   0.00000   108292   -0.26732        0s        0s
+ 701289)   0.09755   0.00000   108290   -0.09631        0s        0s
+ 701290)   0.07629   0.00000   108287    0.02321        0s        0s
+ 701291)   0.10999   0.00000   108286   -0.22643        0s        0s
+ 701292)   5.05788   0.00000   108284    0.24631        0s        0s
+***10
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701293)   2.02685   0.00000   108282   -0.02536        0s        0s
+ 701294)   2.09539   0.00000   108280   -0.13805        0s        0s
+ 701295)   9.49788   0.00000   108278   -0.03790        0s        0s
+ 701296)   3.44454   0.00000   108277   -0.10642        0s        0s
+ 701297)   1.62457   0.00000   108275   -0.28687        0s        0s
+ 701298)   1.98433   0.00000   108273    0.19064        0s        0s
+***11
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701299)   1.90273   0.00000   108272   -0.14609        0s        0s
+ 701300)   0.02768   0.00000   108270   -0.00354        0s        0s
+ 701301)   2.04201   0.00000   108269   -0.01975        0s        0s
+ 701302)   0.32386   0.00000   108268   -0.28151        0s        0s
+ 701303)   2.62317   0.00000   108267    0.15097        0s        0s
+ 701304)   16.5619   0.00000   108264    0.14141        0s        0s
+***12
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701305)   4.48680   0.00000   108260    0.10079        0s        0s
+ 701306)   14.4557   0.00000   108257    0.03947        0s        0s
+ 701307)   20.1422   0.00000   108253   -0.14648        0s        0s
+ 701308)   0.51379   0.00000   108250    0.15052        0s        0s
+***13
+Performing 5 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701309)   0.00943   0.00000   108247   -0.18191        0s        0s
+ 701310)   2.37823   0.00000   108244   -0.32694        0s        0s
+ 701311)   0.88657   0.00000   108241   -0.07293        0s        0s
+ 701312)   2.38951   0.00000   108239   -0.01047        0s        0s
+ 701313)   0.34998   0.00000   108237    0.11909        0s        0s
+***14
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701314)   14.1172   0.00000   108234    0.02462        0s        0s
+ 701315)   1.28888   0.00000   108231    0.10370        0s        0s
+ 701316)   8.58376   0.00000   108229    0.17333        0s        0s
+ 701317)   1.18066   0.00000   108226   -0.14686        0s        0s
+***15
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701318)   0.37791   0.00000   108224   -0.47723        0s        0s
+ 701319)   3.40229   0.00000   108222    0.14856        0s        0s
+ 701320)   0.01011   0.00000   108220   -0.00618        0s        0s
+ 701321)   0.68189   0.00000   108219    0.02281        0s        0s
+***16
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701322)   5.78383   0.00000   108217   -0.09401        0s        0s
+ 701323)   0.05345   0.00000   108215   -0.01322        0s        0s
+ 701324)   1.48397   0.00000   108214   -0.07711        0s        0s
+ 701325)   0.04110   0.00000   108213   -0.26327        0s        0s
+ 701326)   1.51746   0.00000   108211    0.00755        0s        0s
+ 701327)   1.49799   0.00000   108210   -0.28030        0s        0s
+***17
+Performing 5 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701328)   3.55035   0.00000   108209   -0.29225        0s        0s
+ 701329)   2.25204   0.00000   108208    0.00079        0s        0s
+ 701330)   6.76153   0.00000   108206    0.01752        0s        0s
+ 701331)   0.30961   0.00000   108205    0.09982        0s        0s
+ 701332)   17.6590   0.00000   108203   -0.06043        0s        0s
+***18
+Performing 7 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701333)   7.05531   0.00000   108201   -0.16504        0s        0s
+ 701334)   0.04112   0.00000   108200    0.14950        0s        0s
+ 701335)   2.68798   0.00000   108198    0.33342        0s        0s
+ 701336)   0.51572   0.00000   108197    0.03506        0s        0s
+ 701337)   1.84999   0.00000   108195   -0.28209        0s        0s
+ 701338)   3.48490   0.00000   108194    0.00500        0s        0s
+ 701339)   0.92799   0.00000   108193    0.14729        0s        0s
+***19
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701340)   8.52105   0.00000   108192   -0.00927        0s        0s
+ 701341)   0.42775   0.00000   108191    0.16340        0s        0s
+ 701342)   3.05482   0.00000   108190   -0.15434        0s        0s
+ 701343)   10.1712   0.00000   108188   -0.21929        0s        0s
+ 701344)   0.59035   0.00000   108187    0.10881        0s        0s
+ 701345)   2.99608   0.00000   108186   -0.22375        0s        0s
+***20
+Performing 7 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701346)   16.9964   0.00000   108184    0.21312        0s        0s
+ 701347)   5.96650   0.00000   108183   -0.08783        0s        0s
+ 701348)   8.42670   0.00000   108181    0.03219        0s        0s
+ 701349)   0.03912   0.00000   108179   -0.22465        0s        0s
+ 701350)   7.48931   0.00000   108177    0.08855        0s        0s
+ 701351)   0.00009   0.00000   108175    0.08085        0s        0s
+ 701352)   8.82868   0.00000   108173    0.06319        0s        0s
+***21
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701353)   11.7278   0.00000   108171   -0.19094        0s        0s
+ 701354)   0.00745   0.00000   108168    0.06009        0s        0s
+ 701355)   0.18136   0.00000   108166   -0.00536        0s        0s
+ 701356)   0.41260   0.00000   108164   -0.18639        0s        0s
+ 701357)   1.34731   0.00000   108163   -0.03315        0s        0s
+ 701358)   16.2717   0.00000   108159    0.03827        0s        0s
+***22
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701359)   1.42770   0.00000   108155    0.00659        0s        0s
+ 701360)   4.68885   0.00000   108151   -0.27773        0s        0s
+ 701361)   2.16932   0.00000   108148   -0.19453        0s        0s
+ 701362)   0.57564   0.00000   108145    0.01736        0s        0s
+***23
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701363)   2.10202   0.00000   108142    0.09037        0s        0s
+ 701364)   4.43409   0.00000   108139    0.11847        0s        0s
+ 701365)   6.78996   0.00000   108136   -0.00225        0s        0s
+ 701366)   3.56103   0.00000   108133    0.06034        0s        0s
+ 701367)   0.27116   0.00000   108130    0.32140        0s        0s
+ 701368)   0.47182   0.00000   108128   -0.50533        0s        0s
+***24
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701369)   0.68685   0.00000   108126   -0.07386        0s        0s
+ 701370)   10.9536   0.00000   108124   -0.03203        0s        0s
+ 701371)   10.5634   0.00000   108121    0.07197        0s        0s
+ 701372)   0.82643   0.00000   108119   -0.05909        0s        0s
+***25
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701373)   0.26627   0.00000   108116   -0.24763        0s        0s
+ 701374)   3.11636   0.00000   108114    0.19099        0s        0s
+ 701375)   0.00659   0.00000   108113    0.10195        0s        0s
+ 701376)   0.79481   0.00000   108111   -0.03988        0s        0s
+***26
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701377)   10.2020   0.00000   108109   -0.09401        0s        0s
+ 701378)   13.1741   0.00000   108107    0.22229        0s        0s
+ 701379)   13.5250   0.00000   108105    0.19398        0s        0s
+ 701380)   0.11753   0.00000   108103    0.15683        0s        0s
+***27
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701381)   3.61759   0.00000   108101   -0.19073        0s        0s
+ 701382)   0.22942   0.00000   108099   -0.05891        0s        0s
+ 701383)   0.98248   0.00000   108097    0.05836        0s        0s
+ 701384)   0.08076   0.00000   108096   -0.38758        0s        0s
+ 701385)   1.68205   0.00000   108095   -0.28433        0s        0s
+ 701386)   1.23756   0.00000   108094   -0.23150        0s        0s
+***28
+Performing 5 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701387)   3.35133   0.00000   108092   -0.28923        0s        0s
+ 701388)   2.11836   0.00000   108091   -0.35400        0s        0s
+ 701389)   0.55485   0.00000   108090   -0.02605        0s        0s
+ 701390)   0.12693   0.00000   108089    0.10447        0s        0s
+ 701391)   17.0005   0.00000   108088    0.09437        0s        0s
+***29
+Performing 7 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701392)   5.26396   0.00000   108086   -0.06497        0s        0s
+ 701393)   0.08547   0.00000   108084   -0.03686        0s        0s
+ 701394)   0.45756   0.00000   108083    0.22199        0s        0s
+ 701395)   0.11312   0.00000   108081    0.14380        0s        0s
+ 701396)   0.93497   0.00000   108080   -0.40335        0s        0s
+ 701397)   0.01980   0.00000   108079    0.19144        0s        0s
+ 701398)   0.79435   0.00000   108078    0.14357        0s        0s
+***30
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701399)   0.00736   0.00000   108078    0.01634        0s        0s
+ 701400)   0.15914   0.00000   108077    0.00037        0s        0s
+ 701401)   6.50636   0.00000   108076   -0.01179        0s        0s
+ 701402)   0.19097   0.00000   108076    0.16770        0s        0s
+ 701403)   1.75718   0.00000   108075   -0.05493        0s        0s
+ 701404)   16.2835   0.00000   108072    0.20162        0s        0s
+***31
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701405)   5.49786   0.00000   108070    0.12046        0s        0s
+ 701406)   4.07873   0.00000   108067    0.07465        0s        0s
+ 701407)   9.67650   0.00000   108065    0.16798        0s        0s
+ 701408)   8.16959   0.00000   108062   -0.16912        0s        0s
+ 701409)   0.83830   0.00000   108059    0.13721        0s        0s
+ 701410)   2.11608   0.00000   108057    0.04048        0s        0s
+***32
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701411)   8.31430   0.00000   108055   -0.16209        0s        0s
+ 701412)   10.0849   0.00000   108052    0.05662        0s        0s
+ 701413)   5.38436   0.00000   108050   -0.23117        0s        0s
+ 701414)   0.06628   0.00000   108047    0.12932        0s        0s
+***33
+Performing 7 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701415)   8.08383   0.00000   108045   -0.25377        0s        0s
+ 701416)   6.04910   0.00000   108043   -0.07970        0s        0s
+ 701417)   5.67474   0.00000   108040    0.06633        0s        0s
+ 701418)   0.08564   0.00000   108038   -0.21352        0s        0s
+ 701419)   5.97120   0.00000   108036   -0.07068        0s        0s
+ 701420)   0.00023   0.00000   108034    0.06542        0s        0s
+ 701421)   4.28285   0.00000   108031    0.18354        0s        0s
+***34
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701422)   0.54027   0.00000   108030   -0.26350        0s        0s
+ 701423)   4.50174   0.00000   108028   -0.16553        0s        0s
+ 701424)   4.11744   0.00000   108026   -0.12689        0s        0s
+ 701425)   5.65589   0.00000   108024    0.08380        0s        0s
+ 701426)   0.48815   0.00000   108022   -0.06486        0s        0s
+ 701427)   0.82187   0.00000   108021   -0.22478        0s        0s
+***35
+Performing 5 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701428)   1.50583   0.00000   108019   -0.00213        0s        0s
+ 701429)   1.51180   0.00000   108018    0.20416        0s        0s
+ 701430)   6.57705   0.00000   108016    0.05492        0s        0s
+ 701431)   0.19909   0.00000   108015   -0.13363        0s        0s
+ 701432)   0.12037   0.00000   108014   -0.23384        0s        0s
+***36
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701433)   2.99484   0.00000   108012    0.32679        0s        0s
+ 701434)   0.46612   0.00000   108011   -0.19009        0s        0s
+ 701435)   5.11430   0.00000   108010   -0.07350        0s        0s
+ 701436)   0.01699   0.00000   108010    0.04594        0s        0s
+ 701437)   0.46005   0.00000   108009   -0.10016        0s        0s
+ 701438)   0.85202   0.00000   108008   -0.11232        0s        0s
+***37
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701439)   1.31664   0.00000   108008   -0.08271        0s        0s
+ 701440)   9.82342   0.00000   108007   -0.21030        0s        0s
+ 701441)   10.8077   0.00000   108005    0.00908        0s        0s
+ 701442)   0.28090   0.00000   108004   -0.01334        0s        0s
+***38
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701443)   10.0594   0.00000   108003    0.32982        0s        0s
+ 701444)   0.96323   0.00000   108001    0.13079        0s        0s
+ 701445)   8.49723   0.00000   108000    0.08417        0s        0s
+ 701446)   2.30967   0.00000   107998   -0.29767        0s        0s
+***39
+Performing 7 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701447)   1.85584   0.00000   107997   -0.18561        0s        0s
+ 701448)   0.00011   0.00000   107995   -0.06223        0s        0s
+ 701449)   1.12563   0.00000   107994   -0.12441        0s        0s
+ 701450)   0.06117   0.00000   107993   -0.19822        0s        0s
+ 701451)   0.10235   0.00000   107992   -0.11190        0s        0s
+ 701452)   0.12770   0.00000   107992    0.01735        0s        0s
+ 701453)   0.54201   0.00000   107991   -0.05251        0s        0s
+***40
+Performing 5 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701454)   0.42366   0.00000   107990   -0.15816        0s        0s
+ 701455)   0.27250   0.00000   107990   -0.00849        0s        0s
+ 701456)   1.52555   0.00000   107990    0.09151        0s        0s
+ 701457)   0.07987   0.00000   107990   -0.21359        0s        0s
+ 701458)   18.4728   0.00000   107988   -0.02829        0s        0s
+***41
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701459)   5.91518   0.00000   107987   -0.12930        0s        0s
+ 701460)   0.00979   0.00000   107986    0.05899        0s        0s
+ 701461)   0.06168   0.00000   107985   -0.05833        0s        0s
+ 701462)   0.20928   0.00000   107984    0.25531        0s        0s
+ 701463)   1.85940   0.00000   107984   -0.18655        0s        0s
+ 701464)   16.5617   0.00000   107981    0.06757        0s        0s
+***42
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701465)   5.57143   0.00000   107978    0.14350        0s        0s
+ 701466)   1.81894   0.00000   107976   -0.23555        0s        0s
+ 701467)   5.74712   0.00000   107973   -0.14492        0s        0s
+ 701468)   6.13674   0.00000   107971   -0.21560        0s        0s
+ 701469)   1.20899   0.00000   107968   -0.08170        0s        0s
+ 701470)   3.56675   0.00000   107966    0.05216        0s        0s
+***43
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701471)   5.96251   0.00000   107963   -0.12842        0s        0s
+ 701472)   5.63539   0.00000   107961    0.00255        0s        0s
+ 701473)   3.16178   0.00000   107959   -0.26520        0s        0s
+ 701474)   0.13048   0.00000   107956   -0.09505        0s        0s
+***44
+Performing 5 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701475)   0.11027   0.00000   107954   -0.14354        0s        0s
+ 701476)   0.98839   0.00000   107953   -0.28554        0s        0s
+ 701477)   3.53604   0.00000   107951    0.16254        0s        0s
+ 701478)   0.15451   0.00000   107949   -0.14598        0s        0s
+ 701479)   0.12929   0.00000   107947   -0.15139        0s        0s
+***45
+Performing 7 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701480)   9.04234   0.00000   107946   -0.11946        0s        0s
+ 701481)   6.30931   0.00000   107944   -0.08424        0s        0s
+ 701482)   5.27072   0.00000   107941   -0.13183        0s        0s
+ 701483)   0.17750   0.00000   107939   -0.16955        0s        0s
+ 701484)   5.16454   0.00000   107937   -0.18949        0s        0s
+ 701485)   0.00018   0.00000   107935    0.05565        0s        0s
+ 701486)   4.11087   0.00000   107934    0.05748        0s        0s
+***46
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701487)   8.89651   0.00000   107931   -0.04983        0s        0s
+ 701488)   3.43323   0.00000   107929   -0.20362        0s        0s
+ 701489)   0.00799   0.00000   107928   -0.09543        0s        0s
+ 701490)   1.16502   0.00000   107926    0.03471        0s        0s
+***47
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701491)   0.42894   0.00000   107924   -0.21780        0s        0s
+ 701492)   2.56552   0.00000   107923   -0.08117        0s        0s
+ 701493)   3.85861   0.00000   107921   -0.16052        0s        0s
+ 701494)   2.23656   0.00000   107920   -0.33208        0s        0s
+ 701495)   0.43729   0.00000   107919   -0.02276        0s        0s
+ 701496)   1.09494   0.00000   107918   -0.51369        0s        0s
+***48
+Performing 7 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701497)   4.38453   0.00000   107917    0.05768        0s        0s
+ 701498)   0.00077   0.00000   107916   -0.06084        0s        0s
+ 701499)   1.44444   0.00000   107915   -0.20225        0s        0s
+ 701500)   0.10445   0.00000   107914    0.02604        0s        0s
+ 701501)   2.17159   0.00000   107913   -0.04296        0s        0s
+ 701502)   1.73133   0.00000   107912   -0.05426        0s        0s
+ 701503)   1.10991   0.00000   107912   -0.02332        0s        0s
+***49
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701504)   0.82211   0.00000   107911   -0.33762        0s        0s
+ 701505)   7.03948   0.00000   107911   -0.20534        0s        0s
+ 701506)   5.80201   0.00000   107910    0.00691        0s        0s
+ 701507)   0.05871   0.00000   107909    0.00082        0s        0s
+***50
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701508)   4.09950   0.00000   107908    0.02429        0s        0s
+ 701509)   0.02057   0.00000   107908   -0.00945        0s        0s
+ 701510)   0.02343   0.00000   107907   -0.23848        0s        0s
+ 701511)   0.53090   0.00000   107907    0.01219        0s        0s
+ 701512)   0.62860   0.00000   107907    0.04895        0s        0s
+ 701513)   17.0388   0.00000   107905    0.04168        0s        0s
+***51
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701514)   8.21244   0.00000   107903    0.05214        0s        0s
+ 701515)   6.23614   0.00000   107900    0.09254        0s        0s
+ 701516)   5.09458   0.00000   107898    0.09805        0s        0s
+ 701517)   1.45556   0.00000   107896   -0.02931        0s        0s
+***52
+Performing 5 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701518)   1.25543   0.00000   107894   -0.26795        0s        0s
+ 701519)   1.36713   0.00000   107892   -0.27327        0s        0s
+ 701520)   2.30586   0.00000   107891    0.07971        0s        0s
+ 701521)   0.09449   0.00000   107890   -0.09605        0s        0s
+ 701522)   17.3280   0.00000   107888   -0.04798        0s        0s
+***53
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701523)   0.02808   0.00000   107886    0.27754        0s        0s
+ 701524)   6.88775   0.00000   107884   -0.20188        0s        0s
+ 701525)   11.5701   0.00000   107882   -0.00714        0s        0s
+ 701526)   0.61522   0.00000   107880   -0.02899        0s        0s
+***54
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701527)   15.0756   0.00000   107878   -0.04331        0s        0s
+ 701528)   7.11832   0.00000   107875   -0.06128        0s        0s
+ 701529)   12.6452   0.00000   107872   -0.19069        0s        0s
+ 701530)   5.10127   0.00000   107869   -0.13894        0s        0s
+ 701531)   1.39074   0.00000   107867   -0.15472        0s        0s
+ 701532)   2.50751   0.00000   107864   -0.18336        0s        0s
+***55
+Performing 5 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701533)   17.4230   0.00000   107862    0.13125        0s        0s
+ 701534)   1.04284   0.00000   107859   -0.17533        0s        0s
+ 701535)   2.90613   0.00000   107856   -0.16878        0s        0s
+ 701536)   0.40838   0.00000   107854   -0.04103        0s        0s
+ 701537)   0.02285   0.00000   107852    0.00537        0s        0s
+***56
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701538)   0.08798   0.00000   107850    0.17012        0s        0s
+ 701539)   3.12641   0.00000   107848   -0.09697        0s        0s
+ 701540)   0.01687   0.00000   107847   -0.38530        0s        0s
+ 701541)   0.81080   0.00000   107845    0.00063        0s        0s
+***57
+Performing 7 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701542)   5.43313   0.00000   107843    0.13785        0s        0s
+ 701543)   8.38781   0.00000   107842   -0.12740        0s        0s
+ 701544)   5.14748   0.00000   107840    0.21799        0s        0s
+ 701545)   0.11274   0.00000   107838   -0.05411        0s        0s
+ 701546)   5.57459   0.00000   107836    0.01513        0s        0s
+ 701547)   0.00105   0.00000   107834   -0.10561        0s        0s
+ 701548)   2.82275   0.00000   107833    0.02773        0s        0s
+***58
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701549)   0.50178   0.00000   107832   -0.56538        0s        0s
+ 701550)   2.29004   0.00000   107830    0.00508        0s        0s
+ 701551)   4.09055   0.00000   107829   -0.32828        0s        0s
+ 701552)   3.34534   0.00000   107828   -0.12725        0s        0s
+ 701553)   0.58750   0.00000   107826   -0.35844        0s        0s
+ 701554)   1.20619   0.00000   107825   -0.52853        0s        0s
+***59
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701555)   7.17058   0.00000   107824    0.03401        0s        0s
+ 701556)   0.57949   0.00000   107823   -0.20670        0s        0s
+ 701557)   3.00364   0.00000   107822    0.02271        0s        0s
+ 701558)   0.31677   0.00000   107821    0.07591        0s        0s
+ 701559)   0.64905   0.00000   107821   -0.23813        0s        0s
+ 701560)   1.27123   0.00000   107820    0.03876        0s        0s
+***60
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701561)   0.68725   0.00000   107820   -0.00313        0s        0s
+ 701562)   1.34668   0.00000   107819    0.22118        0s        0s
+ 701563)   1.88954   0.00000   107819    0.00173        0s        0s
+ 701564)   0.75261   0.00000   107819    0.09988        0s        0s
+ 701565)   1.22399   0.00000   107818   -0.27458        0s        0s
+ 701566)   16.5238   0.00000   107817    0.15510        0s        0s
+***61
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701567)   3.02518   0.00000   107815    0.10259        0s        0s
+ 701568)   6.31093   0.00000   107813   -0.40896        0s        0s
+ 701569)   7.33386   0.00000   107812   -0.00254        0s        0s
+ 701570)   0.03686   0.00000   107810   -0.01412        0s        0s
+***62
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701571)   0.82210   0.00000   107809   -0.01448        0s        0s
+ 701572)   3.32004   0.00000   107807   -0.32026        0s        0s
+ 701573)   2.70457   0.00000   107806    0.19961        0s        0s
+ 701574)   0.03660   0.00000   107804    0.01117        0s        0s
+***63
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701575)   8.63365   0.00000   107803    0.12839        0s        0s
+ 701576)   1.36069   0.00000   107801   -0.01686        0s        0s
+ 701577)   6.29095   0.00000   107799    0.13901        0s        0s
+ 701578)   0.92292   0.00000   107798   -0.24878        0s        0s
+***64
+Performing 5 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701579)   1.30395   0.00000   107797   -0.60122        0s        0s
+ 701580)   1.28858   0.00000   107796   -0.07565        0s        0s
+ 701581)   1.75866   0.00000   107795   -0.01195        0s        0s
+ 701582)   0.15259   0.00000   107794   -0.23804        0s        0s
+ 701583)   0.03541   0.00000   107793   -0.09815        0s        0s
+***65
+Performing 5 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701584)   0.32237   0.00000   107792   -0.34686        0s        0s
+ 701585)   1.08833   0.00000   107792    0.23943        0s        0s
+ 701586)   2.60914   0.00000   107791   -0.20048        0s        0s
+ 701587)   0.16191   0.00000   107791   -0.04430        0s        0s
+ 701588)   13.0455   0.00000   107791   -0.00039        0s        0s
+***66
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701589)   2.97568   0.00000   107790   -0.08904        0s        0s
+ 701590)   3.05600   0.00000   107790    0.03660        0s        0s
+ 701591)   5.16781   0.00000   107789   -0.09244        0s        0s
+ 701592)   5.20225   0.00000   107788   -0.16277        0s        0s
+ 701593)   2.08532   0.00000   107788   -0.00556        0s        0s
+ 701594)   4.06431   0.00000   107787   -0.43337        0s        0s
+***67
+Performing 4 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701595)   7.28076   0.00000   107786    0.08109        0s        0s
+ 701596)   3.60355   0.00000   107786   -0.12112        0s        0s
+ 701597)   0.47175   0.00000   107785   -0.40129        0s        0s
+ 701598)   1.39658   0.00000   107784    0.04292        0s        0s
+***68
+Performing 7 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701599)   3.90756   0.00000   107784   -0.05790        0s        0s
+ 701600)   5.63417   0.00000   107783   -0.14846        0s        0s
+ 701601)   4.48933   0.00000   107782    0.13695        0s        0s
+ 701602)   0.07280   0.00000   107781   -0.11618        0s        0s
+ 701603)   6.46523   0.00000   107780   -0.04785        0s        0s
+ 701604)   0.00027   0.00000   107780   -0.06855        0s        0s
+ 701605)   1.57920   0.00000   107779    0.01131        0s        0s
+***69
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701606)   3.52664   0.00000   107778    0.43101        0s        0s
+ 701607)   0.08538   0.00000   107778   -0.14884        0s        0s
+ 701608)   2.72976   0.00000   107777   -0.01752        0s        0s
+ 701609)   0.14422   0.00000   107777    0.06709        0s        0s
+ 701610)   0.96531   0.00000   107777   -0.59933        0s        0s
+ 701611)   1.11842   0.00000   107776    0.01045        0s        0s
+***70
+Performing 7 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701612)   7.53978   0.00000   107776    0.13033        0s        0s
+ 701613)   0.00139   0.00000   107776    0.04848        0s        0s
+ 701614)   2.66688   0.00000   107776   -0.34188        0s        0s
+ 701615)   0.15295   0.00000   107776   -0.01145        0s        0s
+ 701616)   6.06639   0.00000   107775   -0.13077        0s        0s
+ 701617)   2.25432   0.00000   107775   -0.24433        0s        0s
+ 701618)   0.79138   0.00000   107775    0.19404        0s        0s
+***71
+Performing 6 updates using Doug's Momentum...
+__Update____Error___UnitCost__Wgt.Cost__Grad.Lin__TimeUsed__TimeLeft__
+ 701619)   1.21923   0.00000   107774    0.14170        0s        0s
+ 701620)   2.64875   0.00000   107774   -0.37940        0s        0s
+ 701621)   3.98512   0.00000   107774   -0.16198        0s        0s
+ 701622)   3.39067   0.00000   107773    0.06326        0s        0s
+ 701623)   1.43125   0.00000   107773    0.09791        0s        0s
+ 701624)   1.44890   0.00000   107773   -0.14533        0s        0s
+success

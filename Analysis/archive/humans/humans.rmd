@@ -1,0 +1,21 @@
+---
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(fig.width=6, fig.height=4, fig.path='figs/',
+                      echo=FALSE, warning=FALSE, message=FALSE)
+setwd('~/Drive/Danish-SRN/Analysis/net-anal')
+source('../utils.R')
+
+library(ggplot2)
+library(reshape2)
+theme_set(theme_bw(base_size=12))
+netlog = read.csv('net-log.csv')
+netlog[, c('hidden', 'rate', 'momentum', 'rand_range', 'num_train')] =
+         lapply(netlog[, c('hidden', 'rate', 'momentum', 
+                           'rand_range', 'num_train')], as.factor)
+```
+
+```{r section}
+```
