@@ -7,11 +7,11 @@
              ' University of Groningen, Center for Language and Cognition
              * Max Planck Institute for Psycholinguistics, Nijmegen
 
-Test results on 1000 examples, 1000 ticks:
+Test results on 998 examples, 998 ticks:
                      Network     
-Error total:         4348.28
-Error per example:   4.34828
-Error per tick:      4.34828
+Error total:         3980.76
+Error per example:   3.98873
+Error per tick:      3.98873
 Unit cost per tick:  0.00000
 Output unit criterion reached on 0 examples (0.00%)
 success

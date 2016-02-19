@@ -1,2 +1,5 @@
 SRN/srn.sublime-workspace
 SRN/pickles
+*.in
+*.ex
+SRN/.ipynb_checkpoints
