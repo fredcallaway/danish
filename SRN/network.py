@@ -155,12 +155,8 @@ class Network(object):
         logging.debug('executing _write_example_files()')
         # note: num_train is updated to the actual number of
         # examples that are generated
-        tmp = self.num_train
-        self.num_train, self.incoding, self.outcoding = \
+        self.incoding, self.outcoding = \
             create_files.write_example_files(self.lang, self.distributed, self.num_train)
-        if self.num_train != tmp:
-            logging.warning('num_train has been changed from'
-                            '%s to %s' % (tmp, self.num_train))
 
     def _write_lens_files(self):
         logging.debug('executing _write_lens_files()')
@@ -240,4 +236,15 @@ def main(*args):
 
 
 if __name__ == '__main__':
-    main(sys.argv[1:])
+    #main(sys.argv[1:])
+    Network('english', num_train=100000).train_network()
+    Network('danish', num_train=100000).train_network()
+
+
+
+
+
+
+
+
+
