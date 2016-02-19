@@ -1,7 +1,7 @@
 """Creates LENS training and testing files"""
 from __future__ import division, print_function
 import csv
-
+import random
 
 def get_corpus(lang, word_boundaries=False):
     """Returns (str): corpus as continuous string of phonemes and utterance boundaries"""
@@ -99,14 +99,33 @@ def get_encodings(lang, distributed):
     return (incoding, outcoding)
 
 
-def train_test_split(corpus, test_size=0.25):
-    train = list(corpus)
-    n_test = int(len(train) * test_size)
-    indices = random.sample(range(len(train)), n_test)
-    test = [train.pop(i) for i in sorted(indices)]
+
+def train_test_split(corpus, num_train, num_test, mode='end'):
+    corpus = list(corpus)
+    total = num_train + num_test
+    if len(corpus) < total:
+        raise ValueError('Corpus is too short!')
+    corpus = corpus[:total]
+    if mode == 'random':
+        indices = random.sample(range(len(corpus)), num_test)
+        train = corpus
+        test = [train.pop(i) for i in sorted(indices)]
+
+    elif mode == 'begin':
+        test, train = corpus[:num_test], corpus[num_test:]
+        
+    elif mode == 'end':
+        train, test = corpus[:-num_test], corpus[-num_test:]
+    
     return train, test
 
 
+def neighbors(iterable, n=2):
+    """Iterates through adjacent groups in the iterable.
+
+    neighbors([1,2,3,4], n=3) -> [1,2,3], [2,3,4]
+    """
+    return (iterable[i:i+n] for i in range(len(iterable) - n))
 
 
 def create_training_files(lang, corpus, num_train, num_test,
@@ -115,28 +134,17 @@ def create_training_files(lang, corpus, num_train, num_test,
 
     Returns (int): the number of training examples.
     """
-    # make test file
+    train, test = train_test_split(corpus, num_train, num_test)
+
     test_file = 'lens/test.ex'
     with open(test_file, 'w+') as f:
-        for c in range(num_test):
-            i = corpus[c]
-            t = corpus[c + 1]
-            write_example(f, i, t, incoding, outcoding, distributed)
+        for current, nxt, in neighbors(test):
+            write_example(f, current, nxt, incoding, outcoding, distributed)
 
-    # make training file
     train_file = 'lens/train.ex'
     with open(train_file, 'w+') as f:
-        c = num_test  # start where we left off
-        while c < num_test + num_train:
-            i = corpus[c]
-            try:
-                t = corpus[c + 1]
-            except IndexError:
-                # no more examples
-                break
-            write_example(f, i, t, incoding, outcoding, distributed)
-            c += 1
-    return c - num_test  # the number of training examples
+        for current, nxt, in neighbors(train):
+            write_example(f, current, nxt, incoding, outcoding, distributed)
 
 
 def creat_exp_files(lang, incoding, outcoding, distributed):
@@ -177,6 +185,15 @@ def creat_exp_files(lang, incoding, outcoding, distributed):
                     write_example(f, i, t, incoding, outcoding)
 
 
+def fmt_example(i, t, incoding, outcoding, distributed=False):
+    """Writes one example to a .ex file"""
+    result = []
+    result.append('name: {%s -> %s}' % (i, t))
+    result.append('1')
+    code = 'I' if distributed else 'i'
+    result.append('{code}: {incoding[i]} t: {outcoding[t]};'.format(**locals()))
+    return '\n'.join(result)
+
 def write_example(f, i, t, incoding, outcoding, distributed=False):
     """Writes one example to a .ex file"""
     f.write('name: {%s -> %s}\n' % (i, t))
@@ -192,14 +209,14 @@ def write_example_files(lang, distributed, num_train, num_test=1000):
     """Populates lens/ with .ex files for training, testing, and experiment"""
     corpus = get_corpus(lang)
     incoding, outcoding = get_encodings(lang, distributed)
-    num_examples = create_training_files(lang, corpus, num_train, num_test,
-                                         incoding, outcoding, distributed)
+    create_training_files(lang, corpus, num_train, num_test,
+                          incoding, outcoding, distributed)
     creat_exp_files(lang, incoding, outcoding, distributed)
 
-    return num_examples, incoding, outcoding
+    return incoding, outcoding
 
 if __name__ == '__main__':
     # for debugging
-    #write_example_files('danish', True, 1000)
-    print(summarize_corpus('english'))
-    print(summarize_corpus('danish'))
+    write_example_files('danish', False, 1000)
+    #print(summarize_corpus('english'))
+    #print(summarize_corpus('danish'))
