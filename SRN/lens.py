@@ -1,17 +1,16 @@
 """Creates .in files for reading by lens"""
 
 
-def write_lens_files(id, seed, input_, hidden, output, numUpdates, learningRate,
-                     momentum, backpropTicks, randRange, ):
+def write_lens_files(id, seed, input_, hidden, output, num_updates, learning_rate,
+                     momentum, backprop_ticks, rand_range, ):
 
-    # architecture is at top of all .in files
     architecture = """
 # Network ID: %(id)s
 
 ## ARCHITECTURE ##
 seed %(seed)s
 addNet srn -i 1
-setObj randRange %(randRange)s
+setObj rand_range %(rand_range)s
 
 addGroup input   %(input_)s  INPUT
 addGroup hidden  %(hidden)s -RESET_ON_EXAMPLE
@@ -24,16 +23,16 @@ connectGroups hidden output
 elmanConnect hidden context
 orderGroups bias input context hidden output
 
-setObj learningRate %(learningRate)s
+setObj learning_rate %(learning_rate)s
 setObj momentum %(momentum)s
 setObj batchSize 1
-setObj backpropTicks %(backpropTicks)s
-setTime -h %(backpropTicks)s
+setObj backprop_ticks %(backprop_ticks)s
+setTime -h %(backprop_ticks)s
 """ % locals()
 
     training = architecture+"""
 ## TRAINING ##
-setObj numUpdates %(numUpdates)s
+setObj num_updates %(num_updates)s
 loadExamples train.ex -s "train.ex"
 useTrainingSet train.ex
 setObj reportInterval 10000
@@ -62,7 +61,7 @@ exit
 
 ## EXP-A TRAINING ##
 setObj reportInterval 10000
-setObj numUpdates 4548
+setObj num_updates 4548
 loadWeights weights/%(id)s.wt
 loadExamples exp-trainA.ex
 useTrainingSet exp-trainA
@@ -75,7 +74,7 @@ for {set i 0} {$i < 72} {incr i} {
     loadExamples exp-testA$i.ex
     useTrainingSet exp-testA$i
     set n [eval getObject exp-testA$i.numExamples]
-    setObj numUpdates $n
+    setObj num_updates $n
     train
 }
 # mark the beginning of exp b
@@ -83,7 +82,7 @@ echo ######
 
 ## EXP-B TRAINING ##
 setObj reportInterval 10000
-setObj numUpdates 4548
+setObj num_updates 4548
 loadWeights weights/%(id)s.wt
 loadExamples exp-trainB.ex
 useTrainingSet exp-trainB
@@ -96,18 +95,18 @@ for {set i 0} {$i < 72} {incr i} {
     loadExamples exp-testB$i.ex
     useTrainingSet exp-testB$i
     set n [eval getObject exp-testB$i.numExamples]
-    setObj numUpdates $n
+    setObj num_updates $n
     train
 }
 echo success
 exit
 """ % locals()
 
-    with open('lens/training.in' % locals(), 'w') as net_file:
+    with open('lens/training.in', 'w') as net_file:
         net_file.write(training)
 
-    with open('lens/testing.in' % locals(), 'w') as net_file:
+    with open('lens/testing.in', 'w') as net_file:
         net_file.write(testing)
 
-    with open('lens/experiment.in' % locals(), 'w') as net_file:
+    with open('lens/experiment.in', 'w') as net_file:
         net_file.write(experiment)
