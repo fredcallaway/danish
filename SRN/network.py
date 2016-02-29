@@ -68,6 +68,7 @@ class Network(object):
 
     def save(self, dir):
         """Saves the network for later use."""
+        #return
         os.makedirs(dir, exist_ok=True)
         with open(dir + '/network.pkl', 'wb+') as f:
             pickle.dump(self, f)
@@ -85,6 +86,7 @@ class Network(object):
 
         Updates self.segmentation_results with results.
         """
+        #return
         if len(inputs) != len(targets):
             raise ValueError('inputs and targets have different lengths: %s and %s'
                              % len(inputs), len(targets))
@@ -103,6 +105,7 @@ class Network(object):
         #pickle.dump(self, open('nets/%s.p' % self._id, 'wb'))
 
     def test(self, inputs, targets):
+        #return
         if len(inputs) != len(targets):
             raise ValueError('inputs and targets have different lengths: %s and %s'
                              % len(inputs), len(targets))
