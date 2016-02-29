@@ -3,3 +3,5 @@ SRN/pickles
 *.in
 *.ex
 SRN/.ipynb_checkpoints
+SRN/temp-lens/
+SRN/srn.sublime-project

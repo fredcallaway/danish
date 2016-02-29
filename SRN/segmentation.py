@@ -3,16 +3,9 @@ from __future__ import division, print_function
 from collections import Counter
 import joblib
 
-def get_predicted_word_boundaries(net_out_file, algorithm, lang=None):
+def get_predicted_word_boundaries(break_out, algorithm, lang=None):
     """Returns predicted word boundaries based on boundary unit activation"""
     # get output for neuron 0
-    with open(net_out_file, 'r') as f:
-        net_out = f.readlines()
-    frames = [line.split(' ')[:-1] for line in net_out[1:]]
-    frames = [ [float(n) for n in f] for f in frames ]
-    break_out = [f[0] for f in frames]
-    print(joblib.dump(break_out, 'pickles/%s_break' % lang))
-
     if algorithm == 'break_average':
         # break activation > average activation of the break unit
         threshold = sum(break_out) / len(break_out)
@@ -35,28 +28,50 @@ def get_predicted_word_boundaries(net_out_file, algorithm, lang=None):
     return predicted_boundaries
 
 
-def get_correct_word_boundaries(lang, num_examples):
-    from create_files import get_corpus
-    corpus = get_corpus(lang, word_boundaries=True)
-    if corpus[0] == 'X':
-        # causes a bug in indexing when testing segmentation
-        corpus = corpus[1:]
-    # extract boundaries
-    correct_boundaries = []
-    i = 1  # i is the index of the *next* character
-    while len(correct_boundaries) < num_examples - 1:
-        if corpus[i] in 'XQ#':
-            correct_boundaries.append(True)
-            if corpus[i] == 'X':
-                i += 1  # skip the Xs
+def extract_boundaries(corpus):
+    corpus = iter(corpus)
+    if next(corpus) == 'X':
+        next(corpus)  # skip a leading X
+    
+    for phone in corpus:
+        if phone == 'X':
+            yield 1
+            next(corpus)  # skip because input doesn't have X's
+        elif phone == 'Q':
+            yield 1
         else:
-            correct_boundaries.append(False)
-        i += 1
-    correct_boundaries.append(True)  # because the last char is followed word boundary
+            yield 0
+    yield 1  # assume the corpus ends at a word boundary
 
-    assert len(correct_boundaries) == num_examples
-    print(joblib.dump(correct_boundaries, 'pickles/%s_boundaries' % lang))
-    return correct_boundaries
+def test_extract_boundaries():
+    out = list(extract_boundaries('XABXDEFXHXIJKLX'))
+    correct = list(map(int, '0100110001'))
+    if out != correct:
+        print('ERROR', out)
+        print('     ', correct)
+
+#def get_correct_word_boundaries(lang, num_examples):
+#    from create_files import get_corpus
+#    corpus = get_corpus(lang, word_boundaries=True)
+#    if corpus[0] == 'X':
+#        # causes a bug in indexing when testing segmentation
+#        corpus = corpus[1:]
+#    # extract boundaries
+#    correct_boundaries = []
+#    i = 1  # i is the index of the *next* character
+#    while len(correct_boundaries) < num_examples - 1:
+#        if corpus[i] in 'XQ#':
+#            correct_boundaries.append(True)
+#            if corpus[i] == 'X':
+#                i += 1  # skip the Xs
+#        else:
+#            correct_boundaries.append(False)
+#        i += 1
+#    correct_boundaries.append(True)  # because the last char is followed word boundary
+
+#    assert len(correct_boundaries) == num_examples
+#    print(joblib.dump(correct_boundaries, 'pickles/%s_boundaries' % lang))
+#    return correct_boundaries
 
 
 def get_random_boundaries(lang, num_examples):
@@ -149,4 +164,5 @@ def test_segmentation(lang, boundary_algorithm):
 if __name__ == '__main__':
     # get_predicted_word_boundaries('english/english.out','break_average')
     # get_correct_word_boundaries('english',1000)
-    print(test_segmentation('danish','break_average'))
+    #print(test_segmentation('danish','break_average'))
+    test_get_correct_word_boundaries()
