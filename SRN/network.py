@@ -26,7 +26,7 @@ LENS_NAME = 'LensOSX'
 if not os.path.isfile(LENS_LOCATION):
     LENS_LOCATION = '/Users/fred/Applications/LensOSX.app/Contents/MacOS/LensOSX'
 
-logging.basicConfig(level=logging.WARNING)
+logging.basicConfig(level=logging.DEBUG)
 
 
 class Network(object):
@@ -55,20 +55,15 @@ class Network(object):
         self.backprop_ticks = backprop_ticks
         self.rand_range = rand_range
 
-        #self.incoding = incoding
-        #self.outcoding = outcoding
-        #self.num_input = len(next(iter(self.incoding.values())))
-        #self.num_output = len(next(iter(self.outcoding.values())))
-
         self.num_input = None  # set by first call to fit()
         self.num_output = None
 
+        os.makedirs('temp-lens', exist_ok=True)
         self.dir = os.path.abspath(tempfile.mkdtemp(dir='temp-lens')) + '/'
         self.weight_file = os.path.abspath(self.dir + 'weights.wt')
 
     def save(self, dir):
         """Saves the network for later use."""
-        #return
         os.makedirs(dir, exist_ok=True)
         with open(dir + '/network.pkl', 'wb+') as f:
             pickle.dump(self, f)
@@ -86,7 +81,6 @@ class Network(object):
 
         Updates self.segmentation_results with results.
         """
-        #return
         if len(inputs) != len(targets):
             raise ValueError('inputs and targets have different lengths: %s and %s'
                              % len(inputs), len(targets))
@@ -101,11 +95,11 @@ class Network(object):
         self._write_ex_file('train.ex', inputs, targets)
         self._write_in_file('train.in')
         self._run_lens('train.in')
+        logging.info('trained on %s utterances' % len(inputs))
 
         #pickle.dump(self, open('nets/%s.p' % self._id, 'wb'))
 
     def test(self, inputs, targets):
-        #return
         if len(inputs) != len(targets):
             raise ValueError('inputs and targets have different lengths: %s and %s'
                              % len(inputs), len(targets))
@@ -190,22 +184,17 @@ class Network(object):
         """Executes a lens .in file and returens output.
 
         Raises RuntimeError if there is an error in the lens script."""
-        try:
-            in_file = self.dir + in_file
-            # todo: pipe output to terminal and python
-            out = subprocess.check_output([LENS_LOCATION, '-b', in_file]).decode('utf-8')
-            if out[-8:] != 'success\n':  # script echos 'success' at the end
-                raise RuntimeError('Error whil executing %s:\n%s' % (in_file, out))
-            out = out[:out.rindex('\n')]  # remove success message
-            with open('%s-log.out' % in_file, 'w+') as f:
-                logging.debug(out)
-                f.write(out)
-            return out
-        finally:
-            # kill any remaining Lens processes
-            for proc in psutil.process_iter():
-                if proc.name() == LENS_NAME:
-                    proc.kill()
+        in_file = self.dir + in_file
+        # todo: pipe output to terminal and python
+        out = subprocess.check_output([LENS_LOCATION, '-b', in_file]).decode('utf-8')
+        if out[-8:] != 'success\n':  # script echos 'success' at the end
+            raise RuntimeError('Error whil executing %s:\n%s' % (in_file, out))
+        #out = out[:out.rindex('\n')]  # remove success message
+        with open('%s-log.out' % in_file, 'w+') as f:
+            logging.debug(out)
+            f.write(out)
+        return out
+
 
 
 def run_nets(parameters, rerun=None):
