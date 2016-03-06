@@ -2,23 +2,13 @@
 import tempfile
 import numpy as np
 import re
-from collections import namedtuple
-import itertools
 import shutil
 import logging
-import time
 import subprocess
 import pickle
-from copy import deepcopy
 import os
-import psutil
-import sys
 
-import create_files
-from lens import write_lens_files
-from experiment import evaluate_experiment
-from segmentation import test_segmentation
-
+import utils
 
 LENS_LOCATION = '/Applications/LensOSX.app/Contents/MacOS/LensOSX'
 LENS_NAME = 'LensOSX'
@@ -26,7 +16,7 @@ LENS_NAME = 'LensOSX'
 if not os.path.isfile(LENS_LOCATION):
     LENS_LOCATION = '/Users/fred/Applications/LensOSX.app/Contents/MacOS/LensOSX'
 
-logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(level=logging.INFO)
 
 
 class Network(object):
@@ -46,7 +36,8 @@ class Network(object):
 
         """
     def __init__(self, seed=0, num_hidden=80, learning_rate=0.1, momentum=0.95,
-                 backprop_ticks=1, rand_range=0.25, architecture='templates/architecture.txt'):
+                 backprop_ticks=1, rand_range=0.25, architecture='templates/architecture.txt',
+                 **kwargs):
         super(Network, self).__init__()
         self.seed = seed
         self.num_hidden = num_hidden
@@ -60,7 +51,10 @@ class Network(object):
 
         os.makedirs('temp-lens', exist_ok=True)
         self.dir = os.path.abspath(tempfile.mkdtemp(dir='temp-lens')) + '/'
+        logging.info('directory: ' + self.dir)
         self.weight_file = os.path.abspath(self.dir + 'weights.wt')
+
+        self.__dict__.update(kwargs)
 
     def save(self, dir):
         """Saves the network for later use."""
@@ -83,31 +77,36 @@ class Network(object):
         """
         if len(inputs) != len(targets):
             raise ValueError('inputs and targets have different lengths: %s and %s'
-                             % len(inputs), len(targets))
+                             % (len(inputs), len(targets)))
         if self.num_input is None:
             self.num_input = len(inputs[0])
             self.num_output = len(targets[0])
-        elif self.num_input != len(inputs[0]) or self.num_output != len(targets[0]):
-            raise ValueError('incompatible input or output size')
-
-        self.num_updates = len(inputs)
+        elif self.num_input != len(inputs[0]):
+            raise ValueError('incompatible input size: %s !=  %s'
+                             % (len(inputs[0]), self.num_input))
+        elif self.num_output != len(targets[0]):
+            raise ValueError('incompatible output size: %s !=  %s'
+                             % (len(targets[0]), self.num_output))
 
         self._write_ex_file('train.ex', inputs, targets)
         self._write_in_file('train.in')
-        self._run_lens('train.in')
-        logging.info('trained on %s utterances' % len(inputs))
+        with utils.Timer() as t:
+            self._run_lens('train.in')
+        logging.info('trained on %s items in %s seconds' % (len(inputs), t.elapsed))
 
-        #pickle.dump(self, open('nets/%s.p' % self._id, 'wb'))
 
     def test(self, inputs, targets):
         if len(inputs) != len(targets):
             raise ValueError('inputs and targets have different lengths: %s and %s'
-                             % len(inputs), len(targets))
+                             % (len(inputs), len(targets)))
 
         self._write_ex_file('test.ex', inputs, targets)
         self._write_in_file('test.in')
-        out = self._run_lens('test.in')
+        with utils.Timer() as t:
+            out = self._run_lens('test.in')
+        #logging.info('tested %s items in %s seconds' % (len(inputs), t.elapsed))
 
+        # Recover saved unit activations.
         out_activations = []
         with open(self.dir + '/output-activations.out', 'r') as acts_file:
             next(acts_file) # skip first line
@@ -118,6 +117,7 @@ class Network(object):
         out_activations = np.array(out_activations)
 
         def parse_test_out(out):
+            # Get the useful information out of the lens stdout.
             labels = {
                 'Error total:       ',
                 'Error per example: ',
@@ -126,16 +126,19 @@ class Network(object):
             }
             for line in out.split('\n'):
                 if line[:19] in labels:
-                    yield re.split(': +', line)[-1]
+                    value = re.split(': +', line)[-1]
+                    yield float(value)
 
         field_names = ['error_total', 'error_per_example', 'error_per_tick',
                        'unit_cost_per_tick', 'out_activations']
-        values = (*parse_test_out(out), out_activations)
+        try:
+            values = (*parse_test_out(out), out_activations)
+        except Exception:
+            logging.error('Lens output:\n' + out)
+            raise
 
         return dict(zip(field_names, values))
-        #TestResult = namedtuple('TestResult', field_names)
-        #return TestResult(*parse_test_out(out), out_activations)
-
+        
 
     def _write_ex_file(self, file, inputs, targets):
         with open(self.dir + file, 'w+') as f:      
@@ -170,16 +173,6 @@ class Network(object):
                     % (self.lang, distributed, self.seed, self.hidden, rate,
                        momentum, self.ticks, rand_range, self.num_train,))
 
-    def _write_example_files(self):
-        create_files.write_example_files(self.lang, self.distributed, self.num_train)
-
-    def _write_lens_files(self):
-        input_ = len(self.incoding)
-        output = len(self.outcoding)
-        write_lens_files(self._id, self.seed, input_, self.hidden,
-                         output, self.num_train, self.rate,
-                         self.momentum, self.ticks, self.rand_range)
-
     def _run_lens(self, in_file):
         """Executes a lens .in file and returens output.
 
@@ -197,71 +190,14 @@ class Network(object):
 
 
 
-def run_nets(parameters, rerun=None):
-    """Runs a series of nets."""
-    if not isinstance(parameters, list):
-        parameters = [parameters]
-    print('NOW RUNNING %s NETS' % len(parameters))
-    for param in parameters:
-        net = Network(**param)
-        net.train_network()
-        net.run_experiment()
 
-
-def generate_permutations(parameters):
-    """Returns [dict]: all permutations of params in parameters.
-
-    parmeters must be a list of (str, list), where str is
-    the key and list is a list of values"""
-
-    def recurse(parameters, permutations):
-        if not parameters:
-            return permutations
-
-        # return a copy of permutations with all possible values
-        #   for param added to each permutation
-        # this multiplies len(permutations) by len(values)
-        param, values = parameters.pop(0)
-        new_perms = []
-        for v in values:
-            perm_copy = deepcopy(permutations)
-            for perm in perm_copy:
-                perm[param] = v
-            new_perms += perm_copy
-
-        return recurse(parameters, new_perms)
-
-    parameters.reverse()  # so that result is sorted by first parameter
-    param, values = parameters.pop(0)
-    permutations = [{param: val} for val in values]
-    return recurse(parameters, permutations)
-
-
-def main(*args):
-    params = generate_permutations([('lang', ['danish', 'english']),
-                                    ('seed', range(28)),
-                                    ('distributed', [True, False])])
-    run_nets(params)
-
-
-def test():
-    ins = 'abc' * 100
-    outs = 'xyz' * 100
-    incoding = outcoding = generate_coding('abcxyz')
-    net = Network(incoding, outcoding)
-    net.fit(ins, outs)
-
-    ins = 'abc' * 100
-    outs = 'xyy' * 100
-    print(net.test(ins, outs))
-
-
-if __name__ == '__main__':
-    test1()
-
-
-
-
+def example():
+    train_in, train_targets = np.random.rand(1000, 20), np.random.rand(1000, 10)
+    test_in, test_targets = np.random.rand(100, 20), np.random.rand(100, 10)
+    net = Network(num_hidden=40, momentum=0.9)
+    net.fit(train_in, train_targets)
+    error = net.test(test_in, test_targets)['error_total']
+    print(error)
 
 
 

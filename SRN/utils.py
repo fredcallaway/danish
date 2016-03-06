@@ -44,13 +44,14 @@ class Timer(object):
         self.lap('total')
 
 
-def neighbors(iterable, n=2):
-    """Iterates through adjacent groups in the iterable.
+def neighbors(lst, n=2):
+    """Iterates through adjacent groups in the list.
 
     neighbors([1,2,3,4], n=3) -> [1,2,3], [2,3,4]
     """
-    num_groups = len(iterable) - n + 1
-    return (iterable[i:i+n] for i in range(num_groups))
+    num_groups = len(lst) - n + 1
+    for i in range(num_groups):
+        yield lst[i:i+n]
 
 
 if __name__ == '__main__':
