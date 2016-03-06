@@ -5,3 +5,8 @@ SRN/pickles
 SRN/.ipynb_checkpoints
 SRN/temp-lens/
 SRN/srn.sublime-project
+SRN/nets/
+SRN/oldnet.py
+SRN/scratch.py
+SRN/trained_nets/
+oldnets/
