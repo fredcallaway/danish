@@ -46,7 +46,7 @@ def train_test_split(corpus, num_train, num_test, mode='end'):
     corpus = list(corpus)
     total = num_train + num_test
     if len(corpus) < total:
-        raise ValueError('Corpus is too short!')
+        raise ValueError('len(corpus) == {}. Too short!'.format(len(corpus)))
     corpus = corpus[:total]
     if mode == 'random':
         indices = random.sample(range(len(corpus)), num_test)
