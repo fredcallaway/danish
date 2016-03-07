@@ -90,7 +90,7 @@ class Network(object):
 
         self._write_ex_file('train.ex', inputs, targets)
         self._write_in_file('train.in')
-        with utils.Timer() as t:
+        with utils.Timer(print_func=None) as t:
             self._run_lens('train.in')
         logging.info('trained on %s items in %s seconds' % (len(inputs), t.elapsed))
 
@@ -102,9 +102,7 @@ class Network(object):
 
         self._write_ex_file('test.ex', inputs, targets)
         self._write_in_file('test.in')
-        with utils.Timer() as t:
-            out = self._run_lens('test.in')
-        #logging.info('tested %s items in %s seconds' % (len(inputs), t.elapsed))
+        out = self._run_lens('test.in')
 
         # Recover saved unit activations.
         out_activations = []

@@ -98,7 +98,7 @@ def run_net(net, lang, num_train, num_test, name=None):
 def main(num_nets=1, num_train=50000, num_test=1000):
     results = []
     for lang in ['english', 'danish']:
-        nets = [Network(i, distributed=d) for i in range(num_nets) for d in (True, False)]
+        nets = [Network(i, distributed=d) for i in range(num_nets) for d in (False, )]
         jobs = (delayed(run_net)(net, lang, num_train, num_test) for net in nets)
         results.extend(Parallel(n_jobs=-1)(jobs))
     
@@ -111,4 +111,4 @@ def main(num_nets=1, num_train=50000, num_test=1000):
 
 
 if __name__ == '__main__':
-    main(3, 100000, 1000)
+    main(1, 1000, 100)

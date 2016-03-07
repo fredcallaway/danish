@@ -23,7 +23,7 @@ class Timer(object):
     """
     def __init__(self, name='Timer', print_func=print):
         self.name = name
-        self.print_func = print_func
+        self.print_func = print_func or (lambda *args: None)  # dummy function.
         self._lap_idx = 0
 
     @property
