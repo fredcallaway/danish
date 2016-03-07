@@ -12,7 +12,7 @@ def extract_boundaries(corpus):
 
     XABXDEFXHXIJKLX -> ABDEFHIJKL, 0100110001"""
     pairs = utils.neighbors(corpus)
-    phones_and_boundaries = ((phone, nxt == 'X')      # phone, precedes_boundary
+    phones_and_boundaries = ((phone, nxt in 'XQ')      # phone, precedes_boundary
                              for phone, nxt in pairs  # for all adjacent pairs
                              if phone != 'X')         # except ones that lead with a boundary
     return phones_and_boundaries
@@ -35,11 +35,13 @@ def get_corpora(lang, num_train=500000, num_test=10000, distributed=False):
 
         # Divide into train and test.
         train, test = corpora.train_test_split(phones_and_boundaries, 
-                                               num_train, num_test, mode='begin')
+                                               num_train, num_test, mode='end')
 
         # Separate phones from boundary markers.
         train_phones, _ = map(list, zip(*train))
         test_phones, test_bounds = map(list, zip(*test))
+        joblib.dump(test_bounds, lang + '_bounds.pkl')
+        return
 
         # Construct targets and encode phonemes.
         train_in, train_out = prepare(train_phones, distributed)
@@ -111,4 +113,5 @@ def main(num_nets=1, num_train=50000, num_test=1000):
 
 
 if __name__ == '__main__':
-    main(1, 1000, 100)
+    #main()
+    get_corpora('english', 600000, 10000)
